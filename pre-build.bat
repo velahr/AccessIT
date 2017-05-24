@@ -1,0 +1,1 @@
+sc stop Apps.Monitor
