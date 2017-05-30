@@ -1,0 +1,1367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9f53c1d0-5057-4d9d-877a-f9516a3312a9" name="PaymentProcessing" linkedPackageId="5ca10769-fb8d-4eea-8626-6595ed145dc9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="58340a76-4ecc-4399-a98f-47ff22dce504">
+      <elementDefinition Id="478373f9-2515-4380-b391-705e054b6c24" />
+      <body>EPaylog</body>
+      <annotatedElements>
+        <subsystemMoniker Id="28316317-9834-4f90-a5b0-03e3410f45e6" LastKnownName="RemitPlus" />
+        <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+        <subsystemMoniker Id="6ef173f1-2d56-420d-9a87-b6413f44a1f4" LastKnownName="Cash Application (Dan &amp; Karen)" />
+      </annotatedElements>
+    </comment>
+    <comment Id="9adfea6c-8f5e-4c0f-9be2-921d7f0743dc">
+      <elementDefinition Id="5976f5ad-eba1-4c14-a1ac-624d852f58b5" />
+      <body>PAcct</body>
+      <annotatedElements>
+        <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        <subsystemMoniker Id="6ef173f1-2d56-420d-9a87-b6413f44a1f4" LastKnownName="Cash Application (Dan &amp; Karen)" />
+      </annotatedElements>
+    </comment>
+    <comment Id="d3a83af9-008f-443c-be3b-e106c93b162e">
+      <elementDefinition Id="8a7c509a-3d9d-4457-a997-21e5917044b1" />
+      <body>Legacy / To be retired</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="0abbc51b-149f-4b8f-801c-29d7300aebf2">
+      <profileInstance Id="f04b4247-899a-4fe9-90c7-f0e708861640" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4510f85e-69fc-4c50-b887-aba1476979da">
+      <profileInstance Id="cfb0c620-b63b-4e48-8ee5-000e7d633bb2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="f6919c95-17e0-4319-ad60-f960499ee9dc" name="CA Agent" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="33c3dac0-21b9-4669-b6da-82ad6a7114e6" />
+        <targetEnds>
+          <association Id="a34c13cd-2102-45c8-ad73-1a4148b37037" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Downpayment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9c149983-8e6d-42f3-943f-aa30cec08185" LastKnownName="Downpayment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="70ccc8b8-5fe9-478d-b4b5-afa9fa845104" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="20ff4e01-256c-4f82-a5b1-1758868f639f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be90637f-9659-4a3d-8a9b-ab6847e166e7" name="Downpayment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="96674e84-c2e6-404f-910e-dd2eb2f72267" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d1e1ac17-3192-4f3f-b268-7dd95d20ad53" />
+          </association>
+          <association Id="ee9c161d-80d1-4ccc-8d99-e18c24a5380d" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="77abfca4-78cb-4c32-9750-bd9577b93148" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e06b014d-1860-4375-98de-b2e842a5c301" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f90d9951-eca5-4874-b85c-0f66056402c5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="94acca78-8bf1-4799-9dae-58abbcc12ff7" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="43e355ec-a16d-4fd6-92c2-d6238cdf9dea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8c7d9ec8-94ae-41e8-a327-238f9666f989" />
+          </association>
+          <association Id="b912c627-1e4e-4f0f-8422-de4380b1ffcb" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="78d9c92f-96f3-40e4-8fb3-a12db9bfeece" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0f894538-ed37-4d76-9b08-39f9738cd12c" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="91b171d6-e437-4c1d-a226-b1162819dbb4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="50612314-7c1f-45ed-986c-0e393e423a78" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3b0d60b4-69e4-43cc-8cf2-23d089f9a61c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8e17fc42-813b-44b7-a78b-ac4ad7e1aea1" />
+          </association>
+          <association Id="ba3bc280-8248-495f-9744-d31bac6512b5" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f9aa78f4-69a2-4478-9e93-f817ae80c49c" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="22530d4d-5c28-45e1-9a20-469ddc2e131c" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="af3112fb-4f28-4d0d-b3f5-3e205f1b84cf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="648183f3-a6e9-4383-bf4c-f319ab57b535" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b2e8d4e0-5035-4c89-99b8-621b020451ff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d6ea180f-f4e8-4f8d-804c-bc9d64a92f06" />
+          </association>
+          <association Id="159e8d98-5efa-4f49-aeb0-f122bf4f3194" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="87d5aeee-b446-4445-a5b5-1852d871196a" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39dbc321-0405-4648-9832-167c31ddcc88" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d505992c-03a2-4970-bb1b-b627a90b55cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="465b11c9-75a7-4e55-ae1e-ee6fdb1deb55" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1b4904c7-4158-4953-865e-7b754f7bc77a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a200de23-eb69-4b85-b938-1569f3ad025f" />
+          </association>
+          <association Id="e660ce97-b24a-4e10-9744-e6e9ae0475e7" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="539d45f0-3828-476d-941a-ade952d94fb6" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3f6b7e79-f0a3-4cd2-be73-82c373eda8ac" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9fb45e20-35db-4525-abb3-09ee63ac9014" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b1e99363-6134-49cd-bd6f-ed9495584c3f" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9911840c-846b-4627-b5ba-69c6b459973b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bbcc5109-8797-4c6b-bae8-8f7947a21ed1" />
+          </association>
+          <association Id="e9c5148c-6a8a-4f96-8849-cfcb67da79e9" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ead1fe2d-6503-46c8-983c-78895a0f3ed2" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4cff4725-8b15-4b6a-848e-7b19a3d25671" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9c87ac68-8837-4f88-8a9c-a6c10ad4c146" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3955dbd4-8737-4302-93f0-f445df471a21" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45b87f1a-d10d-44f9-aace-a0ab784f29b5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7bf21ea8-cc88-4fd1-9688-bb017b7be2ad" />
+          </association>
+          <association Id="9b7f0257-8f90-46da-9180-b70d1fa50a7a" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ad4f8707-f406-4ce4-8f0e-ee211dfe9b5f" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a010e921-414c-4cdf-8b8c-3bbb151a88d4" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ea2c9988-8cbb-4a26-aa84-6c610a2775b0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b96a3f13-edb6-4111-9221-58ca75f7eb61" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="48ad2a0c-8e3b-4fa0-8b3b-d682ae6161fe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="173ea06d-557f-496f-a076-2dec20173221" />
+          </association>
+          <association Id="935700a1-9fa8-4b4a-a322-45c0102b33b3" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4811a3b2-308d-461d-81fd-7e9fef19d08c" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ef5fac6-38ee-47f8-84df-d237f6999546" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="61ae60d3-4e25-472c-b5ed-c7d700fe2b6c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ce87074-2381-43a0-b7f1-8d3da2f4128f" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1a8e9f80-83c3-4ea3-8e0d-6a263ddf3940" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d4fc3faf-3f25-4b71-bea5-bfac9ebac12f" />
+          </association>
+          <association Id="d69da859-f8b6-4151-916f-08bd8f70e924" isDerived="false" sourceEndRoleName="CA Agent" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b6a4e6ea-c0cd-416d-ae5e-843f7b40a98c" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cac41e8b-ed96-43f2-b109-064a056e859b" name="CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="474fd75e-fef6-4b97-9025-cf2555cd617f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60da419c-9a13-4b24-87f7-8d052087d222" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7a3a42b1-ac37-49c0-bcb5-33feff2a8b93" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="44b641ca-3861-4b05-adc0-2874bf45b560" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="dcdb4b94-a922-46c9-ae52-3974a8e03ff6" name="Non-CA Agent" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4cbc3f96-6231-4d92-828a-d349adbe2526" />
+        <targetEnds>
+          <association Id="6ddbbbf4-23a5-44b6-bb29-bb80807d2a19" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Downpayment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1a67dcc1-5448-40cb-b750-c2759ca5ac11" LastKnownName="Downpayment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="310acad5-5658-42fd-ba9c-338f2ee7b5e3" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c722727d-5e74-4789-b97b-77e7f47dfb52" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce7fed5b-2202-4a88-a1b2-17fd97f3698d" name="Downpayment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a4d8a607-e51a-4aaf-8a1c-f10ce097ca01" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f5733c52-7e9e-46ac-8f25-3913fb3c6a0b" />
+          </association>
+          <association Id="1dffef66-4f0d-4bb3-89b0-e9c8b8f8951d" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="89d5ac38-52c9-47f6-9e8b-fd9597bfbefe" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="42875e90-b850-4818-bc0a-202241e0e198" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7d04949f-cc8c-4ab3-bde0-8d04b8c6a8ec" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ac993fa1-09df-43cd-83e4-cf55b1dcd8f6" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c67515cf-d55b-40d0-bdac-8529a37f5b52" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d8dcda28-d2b5-4f00-947b-52b8a027c09e" />
+          </association>
+          <association Id="428b8dc7-dac8-42f3-9463-42fdc5c3eb04" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b6a4e6ea-c0cd-416d-ae5e-843f7b40a98c" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="51bf2a32-b5ab-4338-990e-07b7828c07c2" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="841665f0-6856-4057-ab0c-4150fe7d5ced" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5492a88-c0a1-4bf9-8a5a-23930725709e" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3ebf9a60-876b-455d-bdb8-25b36dd0759b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="18de631f-ed17-4aea-807a-d1ab07780ea1" />
+          </association>
+          <association Id="8fe1adfa-4960-4fb0-9f5e-aeeb47504c2e" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4811a3b2-308d-461d-81fd-7e9fef19d08c" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1d7413a5-9f36-435e-8629-b6a2b5236aef" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e0d787ff-9231-4ffd-bdb6-fe4c139f083d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f6c31dfc-0367-4061-b268-b57cbaf5bcd6" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e871cd40-7f42-4d65-8049-cf3007a75cd2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="14b879c4-24ae-4224-8e86-cf4925d54773" />
+          </association>
+          <association Id="dfa66db8-87b1-43fe-969e-e180baa20114" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ad4f8707-f406-4ce4-8f0e-ee211dfe9b5f" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4c28a7ac-8f8d-4949-9c78-0171818ec316" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="703a9bee-839e-47c4-b4b9-175cb2cf5e10" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a5042716-aed9-4a23-b8de-462f0b335fb1" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0efed975-21f8-4d77-8ed8-bab67d5d31fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e9a24c24-d0a3-487d-862a-55c162c49e05" />
+          </association>
+          <association Id="e2cbee16-b8f3-4dd1-9c2b-0b3abb9bcf8a" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ead1fe2d-6503-46c8-983c-78895a0f3ed2" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="27ec9f21-a57d-4f2d-906a-ac600e75ea54" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="42bf37ac-e4db-4071-be23-da3afe864bc8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d68c7b7d-555c-4def-ab2a-cf48db6d9373" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f888323b-42ef-45f5-b1d0-49415ee18ad3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="73feb14b-debd-4970-bcb6-210863e2d28c" />
+          </association>
+          <association Id="57ef0bfe-94fb-4803-ae3c-cb74898d9e97" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="539d45f0-3828-476d-941a-ade952d94fb6" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b311eab2-a2da-4675-841c-c0bc052fc46b" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e3ef39ab-caab-4aa8-9196-7d0faf137f78" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a806f7c1-5112-4ab7-a7a6-f89486e90385" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1661b37b-618a-4170-b524-0d18e89089da" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="03e79093-9fc9-4bd6-a4a3-23011aa9ce54" />
+          </association>
+          <association Id="5fde91ca-54d7-45b6-85ac-dea2cc89c1bb" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="87d5aeee-b446-4445-a5b5-1852d871196a" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="56dbac78-540d-4415-b3cc-cd592ecfbd26" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dc32e89f-accd-47e0-8ed8-0a96f2d53ba6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eaf88cd2-ef26-4641-8d01-37d25493aac1" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="40451e42-4ec0-4233-9e31-c12e14b1b24a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ffe0b0e4-2771-4dc7-8e07-e7b4e011e7bf" />
+          </association>
+          <association Id="44b5c7c2-0eea-496f-9a21-602fcb4eb65e" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f9aa78f4-69a2-4478-9e93-f817ae80c49c" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="abeb87b1-c266-4023-95ef-8dd0b3e53e7d" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b19da11e-8811-4e1f-af90-e985223dc6ae" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c01a941-868c-4fa0-82b7-ce511283b24b" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4e3a2731-5512-4763-9b58-af13349fbdde" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a3387c62-1ee1-473f-967a-1efc1cb3a929" />
+          </association>
+          <association Id="bdb411b3-0d8f-4ad4-ac7f-d42d5fc22d70" isDerived="false" sourceEndRoleName="Non-CA Agent" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="78d9c92f-96f3-40e4-8fb3-a12db9bfeece" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="69b72f03-64a3-4f4e-b179-8e1b8c7c139b" name="Non-CA Agent" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="347d6e26-f088-43c1-9c2a-f9d653aa7900" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2bdcab80-6d8e-4631-99d8-8447f3285f45" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a4b36504-0e70-4fd5-a048-e0d0f68d6520" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f2b05ce1-a0df-4a4b-ad9a-1cbfe6212e39" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="a5cea55c-fd95-4d6f-aae1-604560d33380" name="Insured" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d8b1cc3a-d0a4-48a2-bf1a-9ffb333efe41" />
+        <targetEnds>
+          <association Id="267b9c38-361a-4475-a210-b161c0af2a6f" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7b5f128b-3d6f-43b3-85d0-7f87db53109c" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ab00b4dc-b2e7-4d4b-bb19-fd9fc95bbb3e" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7a8bc909-71d0-4323-a767-fca51af94738" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="991a5a53-128a-480f-98c5-52634d78b4f6" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1b179f63-de0b-4675-ba2f-1c917f9e2862" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a11fd7d8-5c7b-4167-9f53-deaa49e6e704" />
+          </association>
+          <association Id="b98cfda0-5f92-459e-b3c1-f76fa86df298" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="00789d1c-2f1c-4ea1-8cb4-51df15ddcc7d" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ceb2952d-3a38-4d7d-92ef-257762b25413" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="22ebb25f-bc99-47dc-a8fb-d82dcbe02e85" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="279d9467-5c3d-46db-914e-9ef76a95b546" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="92b084e2-b891-485d-b59b-129804615db7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="202dc879-877e-46a3-942c-008a16ffc8ce" />
+          </association>
+          <association Id="bb9826cd-1e84-4f03-86d1-9d035260cdfc" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5dd67946-0f63-4b34-9cb8-f64e9f89faaf" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b36b1928-e03f-480c-a71d-8b0a0afa2ffa" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8f41450e-ef48-47cf-8530-8394cfd7a095" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f0fc4a05-0eb2-49d7-9cf1-e41a52b85d04" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="85a0985b-52ff-4812-a2dc-e665be3eac14" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="277f8716-66b5-4d5a-87a9-c3364e033885" />
+          </association>
+          <association Id="6eb5f0ce-c126-430c-a851-761019ac5946" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f1dc300c-94a3-42a5-944c-c5fd597fd8de" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eec0eb4d-4dd3-4841-8d8b-4b368d4c6cfa" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f2dc8d39-773a-49f0-84e1-4171e3870276" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2453629f-035a-4fb3-b2f0-d176032f1eb9" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6de32d89-64af-4deb-b992-aab21564e717" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6f70320a-3319-4d71-823d-01880f134096" />
+          </association>
+          <association Id="76464e63-2b95-442d-8582-f3cfdefc2c97" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="36a8640a-7c8f-4018-9437-d8b81b3e4c21" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="167d977d-a9fb-43f5-8a86-330b42edee98" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8a3b3730-1857-469a-a5a2-967975cb0704" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="684b1520-100d-4969-9e71-faeca50918e2" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="968a7326-8dbf-455b-996a-71224745c46e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0cee7e3a-cfb3-4d2f-ab95-e6edbebe5e95" />
+          </association>
+          <association Id="3ec2c796-7e6c-4714-a2f6-65bb718c035a" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a6283f51-d1d5-4209-ab5c-2548acb5c0ca" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a693829-e77b-469e-81af-608261704122" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f10619c6-83a2-4c35-bb5e-5685ae6c05f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="95cff4a2-4645-42d6-8421-0e435b895d1f" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c7e3c385-7217-47e9-a28d-42c40787136e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1904754c-c624-4f86-a566-3a4522954c02" />
+          </association>
+          <association Id="ef2d8989-35f5-4730-844c-8588a62cd837" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1a65cdd4-00f2-46ae-9615-423faa3ae8e5" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d336c62-dd32-42c8-bd81-2f8ddd0f57df" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c015467b-add8-4b3d-8fa8-13b705b6a75d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4207b3c-f283-48fc-b1d1-82abec3c4472" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e50ef65b-d974-4c60-a66e-e576678850c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b83616d2-5d70-4ece-ac45-a7a2b9ff465b" />
+          </association>
+          <association Id="19e9744c-91b0-42af-9f89-f7884005ca22" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2991b417-7001-407b-a352-852166333203" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="68d66a17-0a5c-4df8-a602-e5064322ca31" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="98c25a02-9707-420d-8b4e-ec2a7f84fa84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e1ac080-1cd4-4ccb-b81f-28d0612eb0ab" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="51652d7f-df16-43aa-8f80-4de59f876414" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0ae33d44-d329-435c-a62f-e7dc44b64afa" />
+          </association>
+          <association Id="bd0783f2-acce-4fc8-a952-0c766b83cb82" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="80bf5719-b937-44c3-b850-fbaf9a092cc5" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="96be50d8-8973-4daf-858c-bc9b18c16b5a" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f33a1659-022a-44a2-aae3-e23c69dee882" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5cb8fb39-8c02-49e3-baba-87e022ec55db" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84d026f0-6608-4130-9d73-a9c245e3279d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6d3d220-a928-4b91-acb2-254969fbd06f" />
+          </association>
+          <association Id="bf5f8411-2e7f-4210-9b72-ef0eee6876bc" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0f4f1829-a3d2-4c1c-b619-fa58dbbe909a" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bd37a3f9-b737-4540-a52b-5dd97c50eedd" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a61641ff-c082-434f-94a1-678d212718a3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8791be0e-2143-4658-a56a-f8be9c2b8c39" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="69762e00-35d6-4ea4-b2bb-5d0e04aefec9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="10dbb219-a461-45ac-8565-a132c802ff2d" />
+          </association>
+          <association Id="32fa2f66-3902-4e29-9505-224b14806311" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="969ae2dd-2742-432b-adb0-c062abd0999a" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c1e2dea7-69b7-4d02-b39b-a4619d70f78c" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="be292a45-21ae-4707-a586-591dc28d0fab" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3a598f41-d955-4e21-94a5-5b16e3c7a67b" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b397ae3e-3649-4ffc-8726-0ef297e7b8ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f1bc80c5-727d-4bae-bc04-d99d83e1f103" />
+          </association>
+          <association Id="90e56bae-9e5b-4568-88c4-292256bd9531" isDerived="false" sourceEndRoleName="Insured" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3ea8913f-8899-4b5e-81cf-77bb9ed01882" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="62484f3d-009c-48f4-9b59-2761c99f4fc3" name="Insured" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2855712b-993e-459b-8032-033e93b7de60" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="048bde8c-9fec-4c3e-91e1-73003dab6e14" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="af62962d-df15-45ad-bc2e-d05f32e38085" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6b7ba51a-9ffa-400e-9853-78f4fe91bbe4" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9c149983-8e6d-42f3-943f-aa30cec08185" name="Downpayment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ee59d742-8222-4c35-8244-159a3df44b76" />
+        <subjects>
+          <subsystemMoniker Id="170ed25d-cc22-4447-9f24-325a26416e46" LastKnownName="IA 1.0" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="170ed25d-cc22-4447-9f24-325a26416e46" name="IA 1.0" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="507e324d-81bd-4e3a-8003-a15ac01039bf" />
+        <suppliersInternal>
+          <dependency Id="e0391427-3222-4529-931b-31c9392639e7">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="5b11aa3b-6612-4af1-a87c-5c011d765007" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="77abfca4-78cb-4c32-9750-bd9577b93148" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8fddbb03-405d-4bc7-b1c8-8f7124e419c6" />
+        <subjects>
+          <subsystemMoniker Id="170ed25d-cc22-4447-9f24-325a26416e46" LastKnownName="IA 1.0" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="40129ab2-4603-4ff4-ad36-5bf3f61c1b68" name="Insured" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e3f71c48-3e2c-4e84-806b-5c6805c77668" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="5398f9c6-c10b-48f7-bd76-fdffeab0f4b5" name="IA 2.0" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3a494fe4-b880-47b5-ba10-a7026b1eb83d" />
+        <suppliersInternal>
+          <dependency Id="2e1d750c-c78d-407d-a994-17b8e63efc9e">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="b60aa8ec-b3de-4097-ba43-c1c0e2238d75" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1a67dcc1-5448-40cb-b750-c2759ca5ac11" name="Downpayment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="15b2a5dd-9806-4690-a380-5fcd3eccedb5" />
+        <subjects>
+          <subsystemMoniker Id="5398f9c6-c10b-48f7-bd76-fdffeab0f4b5" LastKnownName="IA 2.0" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="89d5ac38-52c9-47f6-9e8b-fd9597bfbefe" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2aa1c529-52ec-4536-ac4a-6d557793c035" />
+        <subjects>
+          <subsystemMoniker Id="5398f9c6-c10b-48f7-bd76-fdffeab0f4b5" LastKnownName="IA 2.0" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="860900db-95e0-4963-82ac-25fe8e349486" name="Insured" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c48dcbbf-f749-4449-b8cf-462e51964196" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="64fe27f4-3466-474c-a57e-02b24cf66fda" name="IVR" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="57e52ec8-a227-4674-b1a3-85b23c06831c" />
+        <suppliersInternal>
+          <dependency Id="b67c0e04-4a59-4173-a4ad-5cc4f9ee9108">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="c81b7a2b-7334-4866-a7f1-fb843eb326fb" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="7b5f128b-3d6f-43b3-85d0-7f87db53109c" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4b8bdb5c-3bbf-4844-9422-692ec9818bda" />
+        <subjects>
+          <subsystemMoniker Id="64fe27f4-3466-474c-a57e-02b24cf66fda" LastKnownName="IVR" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="5dd67946-0f63-4b34-9cb8-f64e9f89faaf" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1d005dd9-fd33-482c-a86c-cc34acc65032" />
+        <subjects>
+          <subsystemMoniker Id="64fe27f4-3466-474c-a57e-02b24cf66fda" LastKnownName="IVR" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="00789d1c-2f1c-4ea1-8cb4-51df15ddcc7d" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="23f4efef-642b-4ab6-81cd-5dad753e0cc0" />
+        <subjects>
+          <subsystemMoniker Id="64fe27f4-3466-474c-a57e-02b24cf66fda" LastKnownName="IVR" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="10cf755d-a60b-43b8-8fb4-e9078ac5c27b" name="Montly Payment (AG.com)" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6bbb3428-0de5-4bf6-beb6-b7ca1ae9f7d6" />
+        <suppliersInternal>
+          <dependency Id="ee30e0b3-e15f-47dc-a069-74634fbaaed4">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="feb64d19-7ddd-4d5e-a4f4-9cdb0851f1b9" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f1dc300c-94a3-42a5-944c-c5fd597fd8de" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="25a26ede-0260-4c5d-b0b5-3fd0f911039a" />
+        <subjects>
+          <subsystemMoniker Id="10cf755d-a60b-43b8-8fb4-e9078ac5c27b" LastKnownName="Montly Payment (AG.com)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a6283f51-d1d5-4209-ab5c-2548acb5c0ca" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f9aa6879-d94c-4802-8f62-91a85cefee6c" />
+        <subjects>
+          <subsystemMoniker Id="10cf755d-a60b-43b8-8fb4-e9078ac5c27b" LastKnownName="Montly Payment (AG.com)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="36a8640a-7c8f-4018-9437-d8b81b3e4c21" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="97b6d394-0986-42b1-8d42-d6eb38a5c621" />
+        <subjects>
+          <subsystemMoniker Id="10cf755d-a60b-43b8-8fb4-e9078ac5c27b" LastKnownName="Montly Payment (AG.com)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="23462dc5-85e3-42b1-ad48-513168d68213" name="Quick Payment (AG.com)" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="526a1645-7edb-4bf7-baa0-745bc5021f6c" />
+        <suppliersInternal>
+          <dependency Id="3f69743b-4586-4a44-a9dd-3f4f5db62c63">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="a9af8135-2187-4b35-8caf-a0356b8b1485" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1a65cdd4-00f2-46ae-9615-423faa3ae8e5" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ee99af17-c3da-4347-9317-2183fd409575" />
+        <subjects>
+          <subsystemMoniker Id="23462dc5-85e3-42b1-ad48-513168d68213" LastKnownName="Quick Payment (AG.com)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="80bf5719-b937-44c3-b850-fbaf9a092cc5" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="294cabcd-a310-45ab-8fa5-5b1477fd8111" />
+        <subjects>
+          <subsystemMoniker Id="23462dc5-85e3-42b1-ad48-513168d68213" LastKnownName="Quick Payment (AG.com)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2991b417-7001-407b-a352-852166333203" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b7cdaa23-ec66-4b94-86ba-fe6db73cfcab" />
+        <subjects>
+          <subsystemMoniker Id="23462dc5-85e3-42b1-ad48-513168d68213" LastKnownName="Quick Payment (AG.com)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="bf6c098f-b6fa-4681-84d9-27e95cdf0f3a" name="IA 3.0" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6b21149c-efa3-460d-bf47-30ae7f95c133" />
+        <suppliersInternal>
+          <dependency Id="7f1e053e-be0c-40b5-a26f-c5e2be71609b">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="47ea8b15-54aa-44f8-a2e0-bd91e137c7bc" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f9aa78f4-69a2-4478-9e93-f817ae80c49c" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f3477dd9-32e3-4b2f-ae70-90dc182d9885" />
+        <subjects>
+          <subsystemMoniker Id="bf6c098f-b6fa-4681-84d9-27e95cdf0f3a" LastKnownName="IA 3.0" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="78d9c92f-96f3-40e4-8fb3-a12db9bfeece" name="Endorsement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="903a91a6-1068-4d12-8189-3d680a69decf" />
+        <subjects>
+          <subsystemMoniker Id="bf6c098f-b6fa-4681-84d9-27e95cdf0f3a" LastKnownName="IA 3.0" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="87d5aeee-b446-4445-a5b5-1852d871196a" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="417d56f8-c551-4e67-be7b-f94cb42c8471" />
+        <subjects>
+          <subsystemMoniker Id="bf6c098f-b6fa-4681-84d9-27e95cdf0f3a" LastKnownName="IA 3.0" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="539d45f0-3828-476d-941a-ade952d94fb6" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3cde75a1-38f0-4e51-a290-7cc47f779c5c" />
+        <subjects>
+          <subsystemMoniker Id="bf6c098f-b6fa-4681-84d9-27e95cdf0f3a" LastKnownName="IA 3.0" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="cac6a3de-645c-4a15-815d-c0c78e892d40" name="OE/2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b4c45eaa-a8c1-4d26-82a9-293aec1b2295" />
+        <suppliersInternal>
+          <dependency Id="48d698cc-de10-43bb-93f6-fef2cb2c81e5">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="33a4781e-189a-445a-9e45-88fa31b79f12" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ad4f8707-f406-4ce4-8f0e-ee211dfe9b5f" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7f579e83-b25a-4e89-b0c5-b81267a656c5" />
+        <subjects>
+          <subsystemMoniker Id="cac6a3de-645c-4a15-815d-c0c78e892d40" LastKnownName="OE/2" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ead1fe2d-6503-46c8-983c-78895a0f3ed2" name="Endorsement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c3749d75-253a-42e9-9dff-63c9a481cda2" />
+        <subjects>
+          <subsystemMoniker Id="cac6a3de-645c-4a15-815d-c0c78e892d40" LastKnownName="OE/2" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4811a3b2-308d-461d-81fd-7e9fef19d08c" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c8a2038-ced1-47d9-896a-e6367366badb" />
+        <subjects>
+          <subsystemMoniker Id="cac6a3de-645c-4a15-815d-c0c78e892d40" LastKnownName="OE/2" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b6a4e6ea-c0cd-416d-ae5e-843f7b40a98c" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2909187a-1da0-48bc-97b5-4f91a37e1399" />
+        <subjects>
+          <subsystemMoniker Id="cac6a3de-645c-4a15-815d-c0c78e892d40" LastKnownName="OE/2" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="df83a147-2ed4-4660-a78e-a9048b83a078" name="APPS" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e4346cf5-22f0-4b54-aa5b-ccb160194e1e" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="74408d7a-785c-47b0-b29b-52188558a4ed" name="AOPS" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0c504f3c-23ea-479a-a51d-5aba8a49ed8e" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="6b8a0873-0d05-46be-b3b1-2e5bc2fc4c72" name="Endorsement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2a208b3-08a8-4ee9-9eaa-090bc6e73968" />
+        <subjects>
+          <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1e40e429-5f33-4c14-b1a0-f1dfb965673d" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f3f139d2-75a0-4d25-bb79-306514f52129" />
+        <subjects>
+          <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="68a19c08-40ea-444b-ad4e-878c2470f5db" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3bd67c3c-679d-42f3-bfa9-11049e64e935" />
+        <subjects>
+          <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="04bab129-1dfa-4fa0-81cb-9fd2d65359a9" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="32154096-a855-472e-9dc2-92bbef4e1c60" />
+        <subjects>
+          <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="1957ca41-6122-410c-9ace-45585fe29b7a" name="Downpayment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7ad447ac-d15b-4857-aee4-6bf131d8fe64" />
+        <subjects>
+          <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="28316317-9834-4f90-a5b0-03e3410f45e6" name="RemitPlus" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="26cf1072-78f8-4eaf-8901-9aa978aac078" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="09db7b5d-c118-4a2c-8001-b21e64ba37a9" name="Endorsement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3d5548f6-c9fb-476e-8705-e86a547710a8" />
+        <subjects>
+          <subsystemMoniker Id="28316317-9834-4f90-a5b0-03e3410f45e6" LastKnownName="RemitPlus" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bd234f30-718e-44fb-90a1-93d6e68bdf85" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1a2cecb3-9108-41e0-a1fa-8f1784aa8a76" />
+        <subjects>
+          <subsystemMoniker Id="28316317-9834-4f90-a5b0-03e3410f45e6" LastKnownName="RemitPlus" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f281819e-53c5-42b4-b805-bd6504bfb614" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="39167369-00d7-444c-99cc-cb20049996cb" />
+        <subjects>
+          <subsystemMoniker Id="28316317-9834-4f90-a5b0-03e3410f45e6" LastKnownName="RemitPlus" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e96c77d6-5719-4fbb-bac6-cba00838ef7b" name="Downpayment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7780826c-25b6-4837-b0cd-801a2cf7aeb9" />
+        <subjects>
+          <subsystemMoniker Id="28316317-9834-4f90-a5b0-03e3410f45e6" LastKnownName="RemitPlus" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="544fe327-2a72-4ba8-9c60-c5f513c1f636" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6434c42-b198-453f-84a0-cdbc9933394d" />
+        <subjects>
+          <subsystemMoniker Id="28316317-9834-4f90-a5b0-03e3410f45e6" LastKnownName="RemitPlus" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="129fb449-25cb-4794-b951-9c218f87a176" name="Mobile Payment (iPhone App)" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7f6303a3-e61d-4d10-aa4d-0f6c2009c81c" />
+        <suppliersInternal>
+          <dependency Id="c428120c-bdf2-41da-a4b4-0cef0ad804af">
+            <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+            <elementDefinition Id="d0867ff2-571f-4022-a8ae-d8fc61c9efa0" />
+          </dependency>
+        </suppliersInternal>
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0f4f1829-a3d2-4c1c-b619-fa58dbbe909a" name="Monthly Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f2ecf12f-5e4a-483a-80fe-da0dcfe4fcb9" />
+        <subjects>
+          <subsystemMoniker Id="129fb449-25cb-4794-b951-9c218f87a176" LastKnownName="Mobile Payment (iPhone App)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3ea8913f-8899-4b5e-81cf-77bb9ed01882" name="Renewal Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="823357f5-7d87-499e-b9b7-c2950518935b" />
+        <subjects>
+          <subsystemMoniker Id="129fb449-25cb-4794-b951-9c218f87a176" LastKnownName="Mobile Payment (iPhone App)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="969ae2dd-2742-432b-adb0-c062abd0999a" name="Reinstate Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9ffe8d95-4b86-4760-8a25-a9ade90390e9" />
+        <subjects>
+          <subsystemMoniker Id="129fb449-25cb-4794-b951-9c218f87a176" LastKnownName="Mobile Payment (iPhone App)" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="6519161f-0b01-4c45-a511-e5daaa952e33" name="ACH" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="48369a6f-83dc-4f58-bf4f-ad6323a7453c" />
+        <subjects>
+          <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="37668328-6c80-42f1-8447-bed06c89799c" name="Credit Card" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ae8ffe49-dd8d-4685-b1a6-4116bee9627a" />
+        <subjects>
+          <subsystemMoniker Id="df83a147-2ed4-4660-a78e-a9048b83a078" LastKnownName="APPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="6ef173f1-2d56-420d-9a87-b6413f44a1f4" name="Cash Application (Dan &amp; Karen)" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d6b69f72-829f-412d-a808-42448480c0d5" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="bf9f99bb-b8ef-4d8d-a550-db557adb2bd6" name="Manual Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="592037ad-aa74-44b5-825b-ea9c166ac5cf" />
+        <subjects>
+          <subsystemMoniker Id="74408d7a-785c-47b0-b29b-52188558a4ed" LastKnownName="AOPS" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="b43b9b99-b65a-4cef-a766-0164d8a98fdd" name="Underwriting" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4ac31c35-f550-499c-baaa-a2f2fcac42a2" />
+        <targetEnds>
+          <association Id="9b7d159f-312a-47fe-ad35-bcf831fa007c" isDerived="false" sourceEndRoleName="Underwriting" targetEndRoleName="Manual Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bf9f99bb-b8ef-4d8d-a550-db557adb2bd6" LastKnownName="Manual Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c6707172-8d0e-49ba-a643-7099dd425d04" name="Underwriting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6d738b0d-afec-42a5-afb5-5751fc3d3169" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="27e699a8-92a5-4059-9746-02dd081d23bc" name="Manual Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3fd0668a-d033-4417-9193-571b1643030e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="83bb4bb5-f710-4902-915e-98b3844deff5" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="9064b29c-3da8-4f19-8692-8768a4e62762" name="Customer Service" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d3053ed1-4935-49d5-8503-2e4efa3e4dae" />
+        <targetEnds>
+          <association Id="9ff404f8-afc6-47cf-bead-7a7d4462c257" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Downpayment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1957ca41-6122-410c-9ace-45585fe29b7a" LastKnownName="Downpayment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ff25d92-ad35-407a-8684-3ab8834d6549" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2a4e3959-aa32-4f2a-94ec-f0fd229fd324" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ea95a989-6186-498f-8c9f-9abe99568d25" name="Downpayment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="abaed0eb-68e9-4b89-9e7d-329acf012e2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c57be75d-324e-4c38-ad21-366f77028743" />
+          </association>
+          <association Id="be6dd2f4-93c3-4de8-876d-bbb91fbbced1" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6b8a0873-0d05-46be-b3b1-2e5bc2fc4c72" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c51e3dc8-732c-4a7c-bfee-023b671ffd1e" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="251b7d43-149f-4cea-9223-66bd1238af11" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a09b6ec-70d5-4ca2-9dec-a14b61bbecd4" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="02caa011-04b9-4a63-ab8d-2a5603e1062e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a7733829-3cbe-4438-9e1a-fe662e8080d2" />
+          </association>
+          <association Id="1627dbd9-47db-4fb8-a6a2-247f019b43c0" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="04bab129-1dfa-4fa0-81cb-9fd2d65359a9" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a4b876db-326c-41b7-942d-303a52b26b4e" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fbf0453c-adbd-4686-ba9c-f586270c7586" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1167b20b-fb45-4564-ad38-276a765018e4" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7adb2874-8f25-4a93-99ec-0af33bfcfb75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="984b07e4-cd10-49e8-ab89-898d6fc5296d" />
+          </association>
+          <association Id="375866ca-32b3-4168-948a-d6d06d8beed5" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="68a19c08-40ea-444b-ad4e-878c2470f5db" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="24f23a2d-3892-4bd7-8430-f77423cca5ee" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1711fea3-43ee-47b1-8830-1b1938071f37" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="91fb3dd8-a0f6-4447-bbfc-a9fae0c47475" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f9443fbe-8234-4a4c-ae16-f2d07f6abe75" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0f1983f8-beca-4a64-80ce-4fcead2c1d1a" />
+          </association>
+          <association Id="7079d8cb-f763-4548-bae7-20c0136a054d" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="1e40e429-5f33-4c14-b1a0-f1dfb965673d" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e75bf09f-035c-43e7-866e-c831b4c51cdf" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c9880e53-151d-410e-a0f6-8c338d003f67" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1e624ddb-ad87-4a18-940e-bece1530d618" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8eaf73b2-8c25-4589-beb3-717805481a53" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a23b2208-412a-409f-bab9-315f082c7bec" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="51b48085-6462-49f4-ac4f-280c97738336" name="Manual Payment" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d0063e60-400d-425f-96a0-f0e6e2235067" />
+        <subjects>
+          <subsystemMoniker Id="bf6c098f-b6fa-4681-84d9-27e95cdf0f3a" LastKnownName="IA 3.0" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="215095a7-0f31-4dea-a203-e584ed5a9734" name="Underwriting" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7d3b2010-31e6-4dc8-8dd0-0144aeacbdd4" />
+        <targetEnds>
+          <association Id="cce3650d-5cc3-431a-a32b-b01fada6bd3d" isDerived="false" sourceEndRoleName="Underwriting" targetEndRoleName="Manual Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="51b48085-6462-49f4-ac4f-280c97738336" LastKnownName="Manual Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6e65287f-b951-4dfb-a82d-16e9590f7870" name="Underwriting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c39cec5d-a2ff-4f18-aa44-021da31f3a25" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ebcfe2a-ad11-4e8a-acc5-be6b1e74860c" name="Manual Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b0f54823-df06-4256-b4af-82fe07bcd914" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="18ca6a15-b34b-43b4-b649-e2c3450dd2be" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="aa077d30-74b5-4114-8365-09f9bfc02dec" name="Customer Service" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c9f49a96-59e9-40d5-9240-6ed42b7720c3" />
+        <targetEnds>
+          <association Id="80875a47-d98c-4cd7-a739-9369853c236a" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="78d9c92f-96f3-40e4-8fb3-a12db9bfeece" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1acc06ad-f867-4316-85c0-530d07020b9e" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3eda4cfa-829c-4397-9e70-e5ccab9b6f9c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0feab0cf-36c8-4564-805c-e466c4555d35" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="89dc5a40-9ae3-4fca-8aee-93ae43e1ded4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="45984887-7540-496e-bbda-5e8ed8982e84" />
+          </association>
+          <association Id="28d25fb5-1259-4e64-b493-393a2e723ff6" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f9aa78f4-69a2-4478-9e93-f817ae80c49c" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1659a3c3-7fbb-44f9-bd9b-ae94361158a0" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="aea090f7-99a7-4c25-8216-adcbabd36667" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="950920eb-0fb1-4f66-ab3c-ccff4ddcd836" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f95ae64b-67fc-4f1a-9410-ae38879606ca" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="552dc4a1-40b5-41a4-beaf-54a37021169c" />
+          </association>
+          <association Id="e9235792-7b64-4b2a-b5da-dd071997686b" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="87d5aeee-b446-4445-a5b5-1852d871196a" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f19de84c-c82e-416d-85b6-eca4143b792d" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6486f902-96c0-43a5-976a-5cd7e7fb03b5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="324161ac-59f6-47aa-bc60-ef974bec0499" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7c599de8-3e2d-4694-bf80-b75b66d9ca3b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="32f7adc5-4f54-41f9-98c8-d8cfac389478" />
+          </association>
+          <association Id="b9511b84-7427-49b8-b9fb-708594b17c98" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="539d45f0-3828-476d-941a-ade952d94fb6" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d32feaa-7db5-47da-8c58-eb7c61c7f8dd" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3e0f2a22-f6b8-45ff-9d72-4d677d96e225" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a61d6e4f-3e6c-48a0-bada-11c1567b02c2" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="17a976a0-0c9d-4d4e-8cd1-679e3f76714b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cedf162d-d150-4036-a5b0-1e4cebe92696" />
+          </association>
+          <association Id="ae3787fa-9e64-4e0b-9d74-b6f1ce1d87c3" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ead1fe2d-6503-46c8-983c-78895a0f3ed2" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c88195c4-238c-4e43-84e0-063460244cb1" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="146ad534-db43-433d-b0ff-91d27c9de48e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="77505799-49f0-4416-80cb-3faa02aef517" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ed10db87-6f33-4a9b-8ec7-762517e2aa8a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="682873f8-8785-4348-8e2a-138d54f92b5f" />
+          </association>
+          <association Id="2e96135d-c134-40fe-83e5-8ed9756caf4a" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ad4f8707-f406-4ce4-8f0e-ee211dfe9b5f" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ecfb81e0-0377-460f-a5d2-8e04201b8af8" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="33a9cf33-0a2c-41c0-9579-81576473475b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f94b61c4-88aa-4e34-aad0-bce2d6ad874e" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1986325b-1a7a-47d6-b23d-806a499e731b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d085e55e-2e98-4f42-ae97-fbee188b5db8" />
+          </association>
+          <association Id="8aac740d-841f-470c-9065-61be0e9a80d2" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4811a3b2-308d-461d-81fd-7e9fef19d08c" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="04923327-b420-4769-85bd-47d80476903e" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="325bf160-3eac-4daf-ad8f-10b0c2f665ea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4b47aeb-6652-420e-96fb-1c2890b2961c" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1c216c46-8973-4f1e-ae58-3ce93bede1cc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3215a76b-4f34-40f6-badd-7e637d3af2ed" />
+          </association>
+          <association Id="17f445c6-7baf-4e4d-b284-521f38789b48" isDerived="false" sourceEndRoleName="Customer Service" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b6a4e6ea-c0cd-416d-ae5e-843f7b40a98c" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a421b30d-72b6-40b3-b0bd-1a6f31dad755" name="Customer Service" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="db9a5ead-4566-4f43-87ac-70c7c11bf1d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a63e7a86-c20e-4a12-a21c-a04eede7029b" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8f333041-b7d8-4c3b-abc4-3b8197f80020" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c02c84f6-d551-4641-ba12-7613f6967eba" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="895adf9c-50a4-4c0c-97da-909b3a00c0c8" name="Underwriting" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7836832d-6955-445f-b84a-38a7c8dfc2b1" />
+        <targetEnds>
+          <association Id="0ea39d59-0eac-4cb6-8d44-7b5020a02f7f" isDerived="false" sourceEndRoleName="Underwriting" targetEndRoleName="Downpayment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e96c77d6-5719-4fbb-bac6-cba00838ef7b" LastKnownName="Downpayment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7604fde-3576-443c-83a6-243a93bf8ab9" name="Underwriting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cef4b8e1-dd1f-4c21-adec-82259e4ec6e4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e6cc94d-ea57-413c-8e29-8f3d016a2829" name="Downpayment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="436a77d9-e699-4d76-bd28-2754c3b4de13" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8659cc9b-d8fe-45e0-b140-137a5e9722a7" />
+          </association>
+          <association Id="d2a6b841-5765-4e8a-bef8-9db19c31062c" isDerived="false" sourceEndRoleName="Underwriting" targetEndRoleName="Endorsement" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="09db7b5d-c118-4a2c-8001-b21e64ba37a9" LastKnownName="Endorsement" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a607e03b-deef-438a-af08-4b72f8d5987e" name="Underwriting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="23a236f6-9735-4ec6-9321-774d982b2623" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4b25674b-b638-427c-8ade-825d724c7690" name="Endorsement" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="20251c8a-ccae-4c4c-aa4e-423d8e96d7c3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="107c3b45-1df4-47be-8b1a-da6ad3167b41" />
+          </association>
+          <association Id="a5d850f4-eff9-4495-ae2b-5063ad1b3039" isDerived="false" sourceEndRoleName="Underwriting" targetEndRoleName="Renewal Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="f281819e-53c5-42b4-b805-bd6504bfb614" LastKnownName="Renewal Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3cc5f129-5f85-4394-a653-d4153e737b8a" name="Underwriting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="34a0da70-c3ca-47f4-93ae-a0d4eb43c60d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="769e8cbd-f905-48f7-bb28-75f2953abc93" name="Renewal Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="29b52cb6-46f5-4485-a70f-1ad75d49da9c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dc09f632-8422-4cff-9b5d-5859923d9695" />
+          </association>
+          <association Id="89ccfb39-944e-4fef-83eb-b1b042d5c894" isDerived="false" sourceEndRoleName="Underwriting" targetEndRoleName="Reinstate Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bd234f30-718e-44fb-90a1-93d6e68bdf85" LastKnownName="Reinstate Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="db8eeabf-9c36-4712-bb23-3e64f5850db6" name="Underwriting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b766191b-c0de-40a5-b5d9-28c51d70310c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="47d67d54-150d-4b3f-bab7-bf807c8cb50e" name="Reinstate Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="73803ff1-48a9-48a5-bfe3-7c1972ba245f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="03983e92-fba3-4249-9c7e-5ee3061158b7" />
+          </association>
+          <association Id="d90b2897-2300-40ba-b541-3449e24e5574" isDerived="false" sourceEndRoleName="Underwriting" targetEndRoleName="Monthly Payment" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="544fe327-2a72-4ba8-9c60-c5f513c1f636" LastKnownName="Monthly Payment" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0aed663b-651a-4a1d-affb-301e9ed591b7" name="Underwriting" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a883bd37-b065-4cd0-a572-878be265aacd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ee5331c3-6997-4901-a7b8-bb51d3252744" name="Monthly Payment" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="58d3ad23-208b-4b4a-be92-3999b5f8a1cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bd1d62f3-2077-4def-ba5f-c01b643ac512" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="3ab03df3-86b5-4b19-b84d-5506caa2bd88" name="Insured" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9c7b3e1a-6900-473e-a3e4-641e9420a4fb" />
+        <suppliersInternal>
+          <dependency Id="36cee5ac-afcb-4127-8350-ed6957a59df3">
+            <actorMoniker Id="895adf9c-50a4-4c0c-97da-909b3a00c0c8" LastKnownName="Underwriting" />
+            <elementDefinition Id="470c3ef3-51b3-430c-aff6-470c79c42a81" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="5ca10769-fb8d-4eea-8626-6595ed145dc9" name="BillingSystemModels">
+    <elementDefinition Id="4d936961-728d-4523-96cc-50d616c89bb6" />
+  </package>
+</useCaseModelRoot>
