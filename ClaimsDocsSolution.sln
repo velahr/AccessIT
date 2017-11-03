@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsDocsClient", "ClaimsDocsClient\ClaimsDocsClient.csproj", "{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5} = {AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimsDocsBizLogic", "ClaimsDocsBizLogic\ClaimsDocsBizLogic.csproj", "{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClaimsDocsBizLogic", "ClaimsDocsBizLogic", "{E13B0FE3-2865-448B-8C19-131C19CD31E8}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://prodapp51:8080/tfs/accessit
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ClaimsDocsBizLogic\\ClaimsDocsBizLogic.csproj
+		SccProjectTopLevelParentUniqueName1 = ClaimsDocsSolution.sln
+		SccProjectName1 = ClaimsDocsBizLogic
+		SccLocalPath1 = ClaimsDocsBizLogic
+		SccProjectUniqueName2 = ClaimsDocsClient\\ClaimsDocsClient.csproj
+		SccProjectName2 = ClaimsDocsClient
+		SccLocalPath2 = ClaimsDocsClient
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEB1AAA1-E719-41F4-B8E7-10C6E0B35DE5} = {E13B0FE3-2865-448B-8C19-131C19CD31E8}
+	EndGlobalSection
+EndGlobal
