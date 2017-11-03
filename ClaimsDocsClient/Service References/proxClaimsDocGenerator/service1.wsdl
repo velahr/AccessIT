@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="ClaimsDocsGenerator" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IClaimsDocsGenerator_ClaimsDocsGenerateDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimsDocsGenerateDocument" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_ClaimsDocsGenerateDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimsDocsGenerateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_PolicyInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PolicyInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_PolicyInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PolicyInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_CompanyInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_CompanyInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompanyInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_CoverageInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:CoverageInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_CoverageInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CoverageInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_PremiumFinanceCoInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PremiumFinanceCoInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_PremiumFinanceCoInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PremiumFinanceCoInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_LienHolderInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LienHolderInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_LienHolderInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LienHolderInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_NamedInsuredInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:NamedInsuredInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_NamedInsuredInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NamedInsuredInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_VehicleInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_VehicleInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_AdjusterInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:AdjusterInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_AdjusterInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AdjusterInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_LossDescriptionInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LossDescriptionInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_LossDescriptionInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LossDescriptionInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_ProducerInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProducerInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_ProducerInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProducerInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_AttorneyInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:AttorneyInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_AttorneyInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AttorneyInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_AddresseeInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddresseeInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_AddresseeInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddresseeInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_DocGenerationRequestInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocGenerationRequestInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_DocGenerationRequestInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocGenerationRequestInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_VehicleDataInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleDataInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_VehicleDataInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleDataInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_VehicleCoverageInformationGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleCoverageInformationGet" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_VehicleCoverageInformationGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VehicleCoverageInformationGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_ImageRightSaveDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImageRightSaveDocument" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_ImageRightSaveDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImageRightSaveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_ImageRightGetDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImageRightGetDocument" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_ImageRightGetDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImageRightGetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_DocGenerationRequestInformationGetByApprovalID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocGenerationRequestInformationGetByApprovalID" />
+  </wsdl:message>
+  <wsdl:message name="IClaimsDocsGenerator_DocGenerationRequestInformationGetByApprovalID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocGenerationRequestInformationGetByApprovalIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IClaimsDocsGenerator">
+    <wsdl:operation name="ClaimsDocsGenerateDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ClaimsDocsGenerateDocument" message="tns:IClaimsDocsGenerator_ClaimsDocsGenerateDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ClaimsDocsGenerateDocumentResponse" message="tns:IClaimsDocsGenerator_ClaimsDocsGenerateDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PolicyInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/PolicyInformationGet" message="tns:IClaimsDocsGenerator_PolicyInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/PolicyInformationGetResponse" message="tns:IClaimsDocsGenerator_PolicyInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompanyInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/CompanyInformationGet" message="tns:IClaimsDocsGenerator_CompanyInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/CompanyInformationGetResponse" message="tns:IClaimsDocsGenerator_CompanyInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CoverageInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/CoverageInformationGet" message="tns:IClaimsDocsGenerator_CoverageInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/CoverageInformationGetResponse" message="tns:IClaimsDocsGenerator_CoverageInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PremiumFinanceCoInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/PremiumFinanceCoInformationGet" message="tns:IClaimsDocsGenerator_PremiumFinanceCoInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/PremiumFinanceCoInformationGetResponse" message="tns:IClaimsDocsGenerator_PremiumFinanceCoInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LienHolderInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/LienHolderInformationGet" message="tns:IClaimsDocsGenerator_LienHolderInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/LienHolderInformationGetResponse" message="tns:IClaimsDocsGenerator_LienHolderInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NamedInsuredInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/NamedInsuredInformationGet" message="tns:IClaimsDocsGenerator_NamedInsuredInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/NamedInsuredInformationGetResponse" message="tns:IClaimsDocsGenerator_NamedInsuredInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VehicleInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/VehicleInformationGet" message="tns:IClaimsDocsGenerator_VehicleInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/VehicleInformationGetResponse" message="tns:IClaimsDocsGenerator_VehicleInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AdjusterInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/AdjusterInformationGet" message="tns:IClaimsDocsGenerator_AdjusterInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/AdjusterInformationGetResponse" message="tns:IClaimsDocsGenerator_AdjusterInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LossDescriptionInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/LossDescriptionInformationGet" message="tns:IClaimsDocsGenerator_LossDescriptionInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/LossDescriptionInformationGetResponse" message="tns:IClaimsDocsGenerator_LossDescriptionInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProducerInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ProducerInformationGet" message="tns:IClaimsDocsGenerator_ProducerInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ProducerInformationGetResponse" message="tns:IClaimsDocsGenerator_ProducerInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AttorneyInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/AttorneyInformationGet" message="tns:IClaimsDocsGenerator_AttorneyInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/AttorneyInformationGetResponse" message="tns:IClaimsDocsGenerator_AttorneyInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddresseeInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/AddresseeInformationGet" message="tns:IClaimsDocsGenerator_AddresseeInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/AddresseeInformationGetResponse" message="tns:IClaimsDocsGenerator_AddresseeInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocGenerationRequestInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/DocGenerationRequestInformationGet" message="tns:IClaimsDocsGenerator_DocGenerationRequestInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/DocGenerationRequestInformationGetResponse" message="tns:IClaimsDocsGenerator_DocGenerationRequestInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VehicleDataInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/VehicleDataInformationGet" message="tns:IClaimsDocsGenerator_VehicleDataInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/VehicleDataInformationGetResponse" message="tns:IClaimsDocsGenerator_VehicleDataInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VehicleCoverageInformationGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/VehicleCoverageInformationGet" message="tns:IClaimsDocsGenerator_VehicleCoverageInformationGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/VehicleCoverageInformationGetResponse" message="tns:IClaimsDocsGenerator_VehicleCoverageInformationGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImageRightSaveDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ImageRightSaveDocument" message="tns:IClaimsDocsGenerator_ImageRightSaveDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ImageRightSaveDocumentResponse" message="tns:IClaimsDocsGenerator_ImageRightSaveDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImageRightGetDocument">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ImageRightGetDocument" message="tns:IClaimsDocsGenerator_ImageRightGetDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/ImageRightGetDocumentResponse" message="tns:IClaimsDocsGenerator_ImageRightGetDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocGenerationRequestInformationGetByApprovalID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/DocGenerationRequestInformationGetByApprovalID" message="tns:IClaimsDocsGenerator_DocGenerationRequestInformationGetByApprovalID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IClaimsDocsGenerator/DocGenerationRequestInformationGetByApprovalIDResponse" message="tns:IClaimsDocsGenerator_DocGenerationRequestInformationGetByApprovalID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IClaimsDocsGenerator" type="tns:IClaimsDocsGenerator">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClaimsDocsGenerateDocument">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/ClaimsDocsGenerateDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PolicyInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/PolicyInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompanyInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/CompanyInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CoverageInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/CoverageInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PremiumFinanceCoInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/PremiumFinanceCoInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LienHolderInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/LienHolderInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NamedInsuredInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/NamedInsuredInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VehicleInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/VehicleInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdjusterInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/AdjusterInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LossDescriptionInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/LossDescriptionInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProducerInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/ProducerInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AttorneyInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/AttorneyInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddresseeInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/AddresseeInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocGenerationRequestInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/DocGenerationRequestInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VehicleDataInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/VehicleDataInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VehicleCoverageInformationGet">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/VehicleCoverageInformationGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImageRightSaveDocument">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/ImageRightSaveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImageRightGetDocument">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/ImageRightGetDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocGenerationRequestInformationGetByApprovalID">
+      <soap:operation soapAction="http://tempuri.org/IClaimsDocsGenerator/DocGenerationRequestInformationGetByApprovalID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ClaimsDocsGenerator">
+    <wsdl:port name="BasicHttpBinding_IClaimsDocsGenerator" binding="tns:BasicHttpBinding_IClaimsDocsGenerator">
+      <soap:address location="http://testwss06a.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.ClaimsDocsGenerator.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

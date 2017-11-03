@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDocumentDisplayField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentDisplayField" nillable="true" type="tns:DocumentDisplayField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentDisplayField" nillable="true" type="tns:ArrayOfDocumentDisplayField" />
+  <xs:complexType name="DocumentDisplayField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DisplayFieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayFieldValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentDisplayField" nillable="true" type="tns:DocumentDisplayField" />
+  <xs:complexType name="DocGenerationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddresseeAddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddresseeAddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddresseeCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddresseeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddresseeState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddresseeZipCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CarNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ClaimNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CompanyNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactType" type="xs:int" />
+      <xs:element minOccurs="0" name="CopyToAgent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CopyToAttorney" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CopyToFinanceCompany" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CopyToInsured" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CopyToLeinholder" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayFieldsGetFromXML" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="GeneratePDF" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GenerateXML" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RunMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StoreToImageRight" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserDepartment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserIDNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VehicleUKey" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocGenerationRequest" nillable="true" type="tns:DocGenerationRequest" />
+  <xs:complexType name="DocGenerationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaimsDocsDocID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaimsNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateOfLoss" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FolderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GeneralResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="GeneralResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightFilePathAndName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageRightResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListDocuMakerClaimsDocsResponse" nillable="true" type="tns:ArrayOfDocuMakerClaimsDocsResponse" />
+      <xs:element minOccurs="0" name="PDFFilePathAndName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PDFResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="PDFResponseMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLFilePathAndName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLResponseCode" type="xs:int" />
+      <xs:element minOccurs="0" name="XMLResponseMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocGenerationResponse" nillable="true" type="tns:DocGenerationResponse" />
+  <xs:complexType name="ArrayOfDocuMakerClaimsDocsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocuMakerClaimsDocsResponse" nillable="true" type="tns:DocuMakerClaimsDocsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocuMakerClaimsDocsResponse" nillable="true" type="tns:ArrayOfDocuMakerClaimsDocsResponse" />
+  <xs:complexType name="DocuMakerClaimsDocsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentGenerated" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DocumentPathAndFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrinterName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReceipientType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocuMakerClaimsDocsResponse" nillable="true" type="tns:DocuMakerClaimsDocsResponse" />
+  <xs:complexType name="VehicleData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CarNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="VehicleUKey" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VehicleData" nillable="true" type="tns:VehicleData" />
+  <xs:complexType name="ImageRightClaimRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CaptureDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaimsDocsDocID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClaimsNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreateTask" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DateOfLoss" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevicePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FlowID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FolderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IRDocumentPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightClaimsDrawer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightLogin" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightPassword" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightWSUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PackType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequestResult" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RequestorUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceDocumentPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StepID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TDIN" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageRightClaimRequest" nillable="true" type="tns:ImageRightClaimRequest" />
+</xs:schema>

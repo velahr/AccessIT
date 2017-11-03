@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillPolicyClaimInformation">
+    <xs:sequence>
+      <xs:element name="claimNumberField" nillable="true" type="xs:string" />
+      <xs:element name="departmentField" nillable="true" type="xs:string" />
+      <xs:element name="modeField" nillable="true" type="xs:string" />
+      <xs:element name="policyCancellationDateField" nillable="true" type="xs:string" />
+      <xs:element name="policyEffectiveDateField" nillable="true" type="xs:string" />
+      <xs:element name="policyLastEndorsementDateField" nillable="true" type="xs:string" />
+      <xs:element name="policyLastExpirationDateField" nillable="true" type="xs:string" />
+      <xs:element name="policyNumberField" nillable="true" type="xs:string" />
+      <xs:element name="policyStatusField" nillable="true" type="xs:string" />
+      <xs:element name="policyTermField" nillable="true" type="xs:string" />
+      <xs:element name="programCodeField" nillable="true" type="xs:string" />
+      <xs:element name="userField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillPolicyClaimInformation" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillPolicyClaimInformation" />
+  <xs:complexType name="ClaimsDocumentCompanyInformation">
+    <xs:sequence>
+      <xs:element name="accessNameField" nillable="true" type="xs:string" />
+      <xs:element name="claimsAddressField" nillable="true" type="xs:string" />
+      <xs:element name="claimsCSZField" nillable="true" type="xs:string" />
+      <xs:element name="claimsNameField" nillable="true" type="xs:string" />
+      <xs:element name="claimsPhoneField" nillable="true" type="xs:string" />
+      <xs:element name="companyLongNameField" nillable="true" type="xs:string" />
+      <xs:element name="companyShortNameField" nillable="true" type="xs:string" />
+      <xs:element name="dirBillAddressField" nillable="true" type="xs:string" />
+      <xs:element name="dirBillCSZField" nillable="true" type="xs:string" />
+      <xs:element name="dirBillNameField" nillable="true" type="xs:string" />
+      <xs:element name="faxField" nillable="true" type="xs:string" />
+      <xs:element name="generalAddressField" nillable="true" type="xs:string" />
+      <xs:element name="generalCSZField" nillable="true" type="xs:string" />
+      <xs:element name="generalNameField" nillable="true" type="xs:string" />
+      <xs:element name="iVRPhoneField" nillable="true" type="xs:string" />
+      <xs:element name="imageRightFaxCoverValue_CLAIMSField" nillable="true" type="xs:string" />
+      <xs:element name="imageRightFaxCoverValue_UWField" nillable="true" type="xs:string" />
+      <xs:element name="underwritingPhoneField" nillable="true" type="xs:string" />
+      <xs:element name="websiteField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentCompanyInformation" nillable="true" type="tns:ClaimsDocumentCompanyInformation" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillCoverages">
+    <xs:sequence>
+      <xs:element name="accidentalDeathField" nillable="true" type="xs:string" />
+      <xs:element name="arbitrationAgreementWaiverField" nillable="true" type="xs:string" />
+      <xs:element name="autoClubField" nillable="true" type="xs:string" />
+      <xs:element name="billingServiceChargesField" nillable="true" type="xs:string" />
+      <xs:element name="bodilyInjuryField" nillable="true" type="xs:string" />
+      <xs:element name="brokersFeeField" nillable="true" type="xs:string" />
+      <xs:element name="cIGAField" nillable="true" type="xs:string" />
+      <xs:element name="collisionField" nillable="true" type="xs:string" />
+      <xs:element name="collissionDeductibleWaiverField" nillable="true" type="xs:string" />
+      <xs:element name="combinedFPBField" nillable="true" type="xs:string" />
+      <xs:element name="combinedSingleLimitsField" nillable="true" type="xs:string" />
+      <xs:element name="comprehensiveField" nillable="true" type="xs:string" />
+      <xs:element name="expenseConstantField" nillable="true" type="xs:string" />
+      <xs:element name="extraMedicalField" nillable="true" type="xs:string" />
+      <xs:element name="filingFeeField" nillable="true" type="xs:string" />
+      <xs:element name="funeralField" nillable="true" type="xs:string" />
+      <xs:element name="incomeLossField" nillable="true" type="xs:string" />
+      <xs:element name="medicalField" nillable="true" type="xs:string" />
+      <xs:element name="personalFamilyProtectionField" nillable="true" type="xs:string" />
+      <xs:element name="policyFeeField" nillable="true" type="xs:string" />
+      <xs:element name="propertyDamageField" nillable="true" type="xs:string" />
+      <xs:element name="rentalReimbursementField" nillable="true" type="xs:string" />
+      <xs:element name="specialEquipmentField" nillable="true" type="xs:string" />
+      <xs:element name="towingField" nillable="true" type="xs:string" />
+      <xs:element name="unInsuredMotoristStackedField" nillable="true" type="xs:string" />
+      <xs:element name="unInsuredMotoristUnStackedField" nillable="true" type="xs:string" />
+      <xs:element name="underInsuredMotoristStackedField" nillable="true" type="xs:string" />
+      <xs:element name="underInsuredMotoristUnStackedField" nillable="true" type="xs:string" />
+      <xs:element name="uninsuredMotoristBIField" nillable="true" type="xs:string" />
+      <xs:element name="uninsuredMotoristPDField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillCoverages" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillCoverages" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillPremiumFinanceCo">
+    <xs:sequence>
+      <xs:element name="premiumFinanceCoAddressLine1Field" nillable="true" type="xs:string" />
+      <xs:element name="premiumFinanceCoAddressLine2Field" nillable="true" type="xs:string" />
+      <xs:element name="premiumFinanceCoAddressLine3Field" nillable="true" type="xs:string" />
+      <xs:element name="premiumFinanceCoEmailAddressField" nillable="true" type="xs:string" />
+      <xs:element name="premiumFinanceCoFaxNumberField" nillable="true" type="xs:string" />
+      <xs:element name="premiumFinanceCoNameField" nillable="true" type="xs:string" />
+      <xs:element name="premiumFinanceCoPhoneNumberField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillPremiumFinanceCo" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillPremiumFinanceCo" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillLienHolder">
+    <xs:sequence>
+      <xs:element name="lienHolderAddressLine1Field" nillable="true" type="xs:string" />
+      <xs:element name="lienHolderAddressLine2Field" nillable="true" type="xs:string" />
+      <xs:element name="lienHolderAddressLine3Field" nillable="true" type="xs:string" />
+      <xs:element name="lienHolderEmailAddressField" nillable="true" type="xs:string" />
+      <xs:element name="lienHolderFaxNumberField" nillable="true" type="xs:string" />
+      <xs:element name="lienHolderNameField" nillable="true" type="xs:string" />
+      <xs:element name="lienHolderPhoneNumberField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillLienHolder" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillLienHolder" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillNamedInsured">
+    <xs:sequence>
+      <xs:element name="matchLevelField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredAddressLine1Field" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredAddressLine2Field" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredAddressLine3Field" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredCityField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredEmailAddressField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredFaxNumberField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredFirstNameField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredFullNameField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredGaragingAddrField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredGaragingCityField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredGaragingStateField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredGaragingZipField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredLastNameField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredMiddleInitialField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredPhoneNumberField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredPostNetZipField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredStateField" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredZip4Field" nillable="true" type="xs:string" />
+      <xs:element name="namedInsuredZipField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillNamedInsured" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillNamedInsured" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillVehicle">
+    <xs:sequence>
+      <xs:element name="vehicleMakeField" nillable="true" type="xs:string" />
+      <xs:element name="vehicleModelField" nillable="true" type="xs:string" />
+      <xs:element name="vehiclePlateNumberField" nillable="true" type="xs:string" />
+      <xs:element name="vehicleSerialNumberField" nillable="true" type="xs:string" />
+      <xs:element name="vehicleYearField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillVehicle" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillVehicle" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillAdjuster">
+    <xs:sequence>
+      <xs:element name="adjusterEmailAddressField" nillable="true" type="xs:string" />
+      <xs:element name="adjusterFaxNumberField" nillable="true" type="xs:string" />
+      <xs:element name="adjusterFirstNameField" nillable="true" type="xs:string" />
+      <xs:element name="adjusterLastNameField" nillable="true" type="xs:string" />
+      <xs:element name="adjusterMiddleInitialField" nillable="true" type="xs:string" />
+      <xs:element name="adjusterPhoneNumberField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillAdjuster" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillAdjuster" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillLossDescription">
+    <xs:sequence>
+      <xs:element name="claimDateOfLossField" nillable="true" type="xs:string" />
+      <xs:element name="claimNumberField" nillable="true" type="xs:string" />
+      <xs:element name="claimReportDateField" nillable="true" type="xs:string" />
+      <xs:element name="dayofLossField" nillable="true" type="xs:string" />
+      <xs:element name="lossDescriptionCityField" nillable="true" type="xs:string" />
+      <xs:element name="lossDescriptionLocationField" nillable="true" type="xs:string" />
+      <xs:element name="lossDescriptionStateField" nillable="true" type="xs:string" />
+      <xs:element name="lossDescriptionStreetAddressField" nillable="true" type="xs:string" />
+      <xs:element name="monthofLossField" nillable="true" type="xs:string" />
+      <xs:element name="yearofLossField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillLossDescription" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillLossDescription" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillProducer">
+    <xs:sequence>
+      <xs:element name="mailPostNetZipField" nillable="true" type="xs:string" />
+      <xs:element name="matchLevelField" nillable="true" type="xs:string" />
+      <xs:element name="producerAddressLine1Field" nillable="true" type="xs:string" />
+      <xs:element name="producerAddressLine2Field" nillable="true" type="xs:string" />
+      <xs:element name="producerAddressLine3Field" nillable="true" type="xs:string" />
+      <xs:element name="producerCodeField" nillable="true" type="xs:string" />
+      <xs:element name="producerEmailAddressField" nillable="true" type="xs:string" />
+      <xs:element name="producerFaxNumberField" nillable="true" type="xs:string" />
+      <xs:element name="producerNameField" nillable="true" type="xs:string" />
+      <xs:element name="producerPhoneNumberField" nillable="true" type="xs:string" />
+      <xs:element name="producerStateField" nillable="true" type="xs:string" />
+      <xs:element name="producerZipField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillProducer" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillProducer" />
+  <xs:complexType name="ClaimsDocumentInputDocumentWhitehillAttorney">
+    <xs:sequence>
+      <xs:element name="attorneyAddressLine1Field" nillable="true" type="xs:string" />
+      <xs:element name="attorneyAddressLine2Field" nillable="true" type="xs:string" />
+      <xs:element name="attorneyAddressLine3Field" nillable="true" type="xs:string" />
+      <xs:element name="attorneyCityField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyEmailAddressField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyFaxNumberField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyFirstNameField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyLastNameField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyMiddleInitialField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyPhoneNumberField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyStateField" nillable="true" type="xs:string" />
+      <xs:element name="attorneyZip4Field" nillable="true" type="xs:string" />
+      <xs:element name="attorneyZipField" nillable="true" type="xs:string" />
+      <xs:element name="mailPostNetZipField" nillable="true" type="xs:string" />
+      <xs:element name="matchLevelField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentInputDocumentWhitehillAttorney" nillable="true" type="tns:ClaimsDocumentInputDocumentWhitehillAttorney" />
+  <xs:complexType name="ClaimsDocumentAddressee">
+    <xs:sequence>
+      <xs:element name="addresseeAddressLine1Field" nillable="true" type="xs:string" />
+      <xs:element name="addresseeAddressLine2Field" nillable="true" type="xs:string" />
+      <xs:element name="addresseeAddressLine3Field" nillable="true" type="xs:string" />
+      <xs:element name="addresseeCityField" nillable="true" type="xs:string" />
+      <xs:element name="addresseeEmailAddressField" nillable="true" type="xs:string" />
+      <xs:element name="addresseeFaxNumberField" nillable="true" type="xs:string" />
+      <xs:element name="addresseeNameField" nillable="true" type="xs:string" />
+      <xs:element name="addresseePhoneNumberField" nillable="true" type="xs:string" />
+      <xs:element name="addresseePostNetZipField" nillable="true" type="xs:string" />
+      <xs:element name="addresseeStateField" nillable="true" type="xs:string" />
+      <xs:element name="addresseeZip4Field" nillable="true" type="xs:string" />
+      <xs:element name="addresseeZipField" nillable="true" type="xs:string" />
+      <xs:element name="allAddressLinesField" nillable="true" type="tns:ArrayOfClaimsDocumentAddresseeAddressLine" />
+      <xs:element name="attachedDocumentField" nillable="true" type="xs:string" />
+      <xs:element name="diaryAutoUpdateField" nillable="true" type="xs:string" />
+      <xs:element name="documentDefinitionNameField" nillable="true" type="xs:string" />
+      <xs:element name="imageRightDocumentIDField" nillable="true" type="xs:string" />
+      <xs:element name="imageRightDocumentSectionField" nillable="true" type="xs:string" />
+      <xs:element name="imageRightDrawerField" nillable="true" type="xs:string" />
+      <xs:element name="importToDataMatxField" nillable="true" type="xs:string" />
+      <xs:element name="importToImageRightField" nillable="true" type="xs:string" />
+      <xs:element name="lastModifiedField" nillable="true" type="xs:string" />
+      <xs:element name="matchLevelField" nillable="true" type="xs:string" />
+      <xs:element name="programIDField" nillable="true" type="xs:string" />
+      <xs:element name="proofOfMailingField" nillable="true" type="xs:string" />
+      <xs:element name="reviewRequiredField" nillable="true" type="xs:string" />
+      <xs:element name="styleSheetNameField" nillable="true" type="xs:string" />
+      <xs:element name="templateNameField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentAddressee" nillable="true" type="tns:ClaimsDocumentAddressee" />
+  <xs:complexType name="ArrayOfClaimsDocumentAddresseeAddressLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaimsDocumentAddresseeAddressLine" nillable="true" type="tns:ClaimsDocumentAddresseeAddressLine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaimsDocumentAddresseeAddressLine" nillable="true" type="tns:ArrayOfClaimsDocumentAddresseeAddressLine" />
+  <xs:complexType name="ClaimsDocumentAddresseeAddressLine">
+    <xs:sequence>
+      <xs:element name="lineField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentAddresseeAddressLine" nillable="true" type="tns:ClaimsDocumentAddresseeAddressLine" />
+  <xs:complexType name="ArrayOfClaimsDocumentAllCoveragesCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaimsDocumentAllCoveragesCar" nillable="true" type="tns:ClaimsDocumentAllCoveragesCar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaimsDocumentAllCoveragesCar" nillable="true" type="tns:ArrayOfClaimsDocumentAllCoveragesCar" />
+  <xs:complexType name="ClaimsDocumentAllCoveragesCar">
+    <xs:sequence>
+      <xs:element name="carCoveragesField" nillable="true" type="tns:ArrayOfClaimsDocumentAllCoveragesCarCarCoverage" />
+      <xs:element name="carMakeField" nillable="true" type="xs:string" />
+      <xs:element name="carModelField" nillable="true" type="xs:string" />
+      <xs:element name="carYearField" nillable="true" type="xs:string" />
+      <xs:element name="vINField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentAllCoveragesCar" nillable="true" type="tns:ClaimsDocumentAllCoveragesCar" />
+  <xs:complexType name="ArrayOfClaimsDocumentAllCoveragesCarCarCoverage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaimsDocumentAllCoveragesCarCarCoverage" nillable="true" type="tns:ClaimsDocumentAllCoveragesCarCarCoverage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaimsDocumentAllCoveragesCarCarCoverage" nillable="true" type="tns:ArrayOfClaimsDocumentAllCoveragesCarCarCoverage" />
+  <xs:complexType name="ClaimsDocumentAllCoveragesCarCarCoverage">
+    <xs:sequence>
+      <xs:element name="amountField" nillable="true" type="xs:string" />
+      <xs:element name="carNumberField" nillable="true" type="xs:string" />
+      <xs:element name="companyNumberField" nillable="true" type="xs:string" />
+      <xs:element name="coverageCodeField" nillable="true" type="xs:string" />
+      <xs:element name="coverageCodeNumberField" nillable="true" type="xs:string" />
+      <xs:element name="coverageDescField" nillable="true" type="xs:string" />
+      <xs:element name="deductibleField" nillable="true" type="tns:ArrayOfClaimsDocumentAllCoveragesCarCarCoverageDeductible" />
+      <xs:element name="limitField" nillable="true" type="tns:ArrayOfClaimsDocumentAllCoveragesCarCarCoverageLimit" />
+      <xs:element name="lp1eField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentAllCoveragesCarCarCoverage" nillable="true" type="tns:ClaimsDocumentAllCoveragesCarCarCoverage" />
+  <xs:complexType name="ArrayOfClaimsDocumentAllCoveragesCarCarCoverageDeductible">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaimsDocumentAllCoveragesCarCarCoverageDeductible" nillable="true" type="tns:ClaimsDocumentAllCoveragesCarCarCoverageDeductible" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaimsDocumentAllCoveragesCarCarCoverageDeductible" nillable="true" type="tns:ArrayOfClaimsDocumentAllCoveragesCarCarCoverageDeductible" />
+  <xs:complexType name="ClaimsDocumentAllCoveragesCarCarCoverageDeductible">
+    <xs:sequence>
+      <xs:element name="deductibleAppliesToCdField" nillable="true" type="xs:string" />
+      <xs:element name="deductibleTypeCDField" nillable="true" type="xs:string" />
+      <xs:element name="formatIntegerField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentAllCoveragesCarCarCoverageDeductible" nillable="true" type="tns:ClaimsDocumentAllCoveragesCarCarCoverageDeductible" />
+  <xs:complexType name="ArrayOfClaimsDocumentAllCoveragesCarCarCoverageLimit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaimsDocumentAllCoveragesCarCarCoverageLimit" nillable="true" type="tns:ClaimsDocumentAllCoveragesCarCarCoverageLimit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaimsDocumentAllCoveragesCarCarCoverageLimit" nillable="true" type="tns:ArrayOfClaimsDocumentAllCoveragesCarCarCoverageLimit" />
+  <xs:complexType name="ClaimsDocumentAllCoveragesCarCarCoverageLimit">
+    <xs:sequence>
+      <xs:element name="formatIntegerField" nillable="true" type="xs:string" />
+      <xs:element name="limitAppliesToCdField" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocumentAllCoveragesCarCarCoverageLimit" nillable="true" type="tns:ClaimsDocumentAllCoveragesCarCarCoverageLimit" />
+</xs:schema>

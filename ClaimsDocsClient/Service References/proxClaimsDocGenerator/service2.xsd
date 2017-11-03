@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" />
+  <xs:element name="ClaimsDocsGenerateDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="listDisplayFields" nillable="true" type="q1:ArrayOfDocumentDisplayField" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q2:DocGenerationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClaimsDocsGenerateDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ClaimsDocsGenerateDocumentResult" nillable="true" type="q3:DocGenerationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PolicyInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q4:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PolicyInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="PolicyInformationGetResult" nillable="true" type="q5:ClaimsDocumentInputDocumentWhitehillPolicyClaimInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q6:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompanyInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="CompanyInformationGetResult" nillable="true" type="q7:ClaimsDocumentCompanyInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CoverageInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q8:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CoverageInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="CoverageInformationGetResult" nillable="true" type="q9:ClaimsDocumentInputDocumentWhitehillCoverages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PremiumFinanceCoInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q10:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PremiumFinanceCoInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="PremiumFinanceCoInformationGetResult" nillable="true" type="q11:ClaimsDocumentInputDocumentWhitehillPremiumFinanceCo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LienHolderInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q12:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LienHolderInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="LienHolderInformationGetResult" nillable="true" type="q13:ClaimsDocumentInputDocumentWhitehillLienHolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NamedInsuredInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q14:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NamedInsuredInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="NamedInsuredInformationGetResult" nillable="true" type="q15:ClaimsDocumentInputDocumentWhitehillNamedInsured" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q16:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="VehicleInformationGetResult" nillable="true" type="q17:ClaimsDocumentInputDocumentWhitehillVehicle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjusterInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q18:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AdjusterInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="AdjusterInformationGetResult" nillable="true" type="q19:ClaimsDocumentInputDocumentWhitehillAdjuster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LossDescriptionInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q20:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LossDescriptionInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="LossDescriptionInformationGetResult" nillable="true" type="q21:ClaimsDocumentInputDocumentWhitehillLossDescription" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProducerInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q22:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProducerInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="ProducerInformationGetResult" nillable="true" type="q23:ClaimsDocumentInputDocumentWhitehillProducer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AttorneyInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q24:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AttorneyInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="AttorneyInformationGetResult" nillable="true" type="q25:ClaimsDocumentInputDocumentWhitehillAttorney" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddresseeInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q26:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddresseeInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="AddresseeInformationGetResult" nillable="true" type="q27:ClaimsDocumentAddressee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocGenerationRequestInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q28:DocGenerationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocGenerationRequestInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="DocGenerationRequestInformationGetResult" nillable="true" type="q29:DocGenerationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleDataInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q30:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleDataInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="VehicleDataInformationGetResult" nillable="true" type="q31:VehicleData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleCoverageInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q32:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VehicleCoverageInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic.SchemaClasses" minOccurs="0" name="VehicleCoverageInformationGetResult" nillable="true" type="q33:ArrayOfClaimsDocumentAllCoveragesCar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageRightSaveDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objIRRequest" nillable="true" type="q34:ImageRightClaimRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageRightSaveDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ImageRightSaveDocumentResult" nillable="true" type="q35:ImageRightClaimRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageRightGetDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objIRPolicyRequest" nillable="true" type="q36:ImageRightClaimRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImageRightGetDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ImageRightGetDocumentResult" nillable="true" type="q37:ImageRightClaimRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocGenerationRequestInformationGetByApprovalID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intDocID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DocGenerationRequestInformationGetByApprovalIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="DocGenerationRequestInformationGetByApprovalIDResult" nillable="true" type="q38:DocGenerationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
