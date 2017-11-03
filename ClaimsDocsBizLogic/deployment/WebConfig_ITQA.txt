@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <section name="loggingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings, Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <section name="dataConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings, Microsoft.Practices.EnterpriseLibrary.Data, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="ClaimsDocsBizLogic.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <loggingConfiguration name="Logging Application Block" tracingEnabled="true"
+    defaultCategory="General" logWarningsWhenNoCategoriesMatch="true">
+    <listeners>
+      <add toAddress="kphifer@accessgeneral.com" fromAddress="ClaimsDocs@AccessGeneral.com"
+        subjectLineStarter="ClaimsDocs" subjectLineEnder="ClaimsDocs"
+        smtpServer="AIHEXCH01.accessgeneral.com" smtpPort="25" formatter="Text Formatter"
+        listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.EmailTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        traceOutputOptions="None" filter="All" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.EmailTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        name="Email TraceListener" />
+      <add source="Enterprise Library Logging" formatter="Text Formatter"
+        log="Application" machineName="" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        traceOutputOptions="None" filter="All" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.FormattedEventLogTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        name="Formatted EventLog TraceListener" />
+    </listeners>
+    <formatters>
+      <add template="Timestamp: {timestamp}&#xD;&#xA;Message: {message}&#xD;&#xA;Category: {category}&#xD;&#xA;Priority: {priority}&#xD;&#xA;EventId: {eventid}&#xD;&#xA;Severity: {severity}&#xD;&#xA;Title:{title}&#xD;&#xA;Machine: {machine}&#xD;&#xA;Application Domain: {appDomain}&#xD;&#xA;Process Id: {processId}&#xD;&#xA;Process Name: {processName}&#xD;&#xA;Win32 Thread Id: {win32ThreadId}&#xD;&#xA;Thread Name: {threadName}&#xD;&#xA;Extended Properties: {dictionary({key} - {value}&#xD;&#xA;)}"
+        type="Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter, Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+        name="Text Formatter" />
+    </formatters>
+    <categorySources>
+      <add switchValue="All" name="Warning">
+        <listeners>
+          <add name="Email TraceListener" />
+        </listeners>
+      </add>
+      <add switchValue="All" name="General">
+        <listeners>
+          <add name="Formatted EventLog TraceListener" />
+        </listeners>
+      </add>
+    </categorySources>
+    <specialSources>
+      <allEvents switchValue="All" name="All Events">
+        <listeners>
+          <add name="Email TraceListener" />
+        </listeners>
+      </allEvents>
+      <notProcessed switchValue="All" name="Unprocessed Category" />
+      <errors switchValue="All" name="Logging Errors &amp; Warnings">
+        <listeners>
+          <add name="Formatted EventLog TraceListener" />
+        </listeners>
+      </errors>
+    </specialSources>
+  </loggingConfiguration>
+  <system.diagnostics>
+    <sources>
+      <source name="System.ServiceModel.MessageLogging" switchValue="Warning, ActivityTracing">
+        <listeners>
+          <add type="System.Diagnostics.DefaultTraceListener" name="Default">
+            <filter type="" />
+          </add>
+          <add name="ServiceModelMessageLoggingListener">
+            <filter type="" />
+          </add>
+        </listeners>
+      </source>
+      <source name="System.ServiceModel" switchValue="Off,ActivityTracing" propagateActivity="true">
+        <listeners>
+          <add type="System.Diagnostics.DefaultTraceListener" name="Default">
+            <filter type="" />
+          </add>
+          <add name="ServiceModelTraceListener">
+            <filter type="" />
+          </add>
+        </listeners>
+      </source>
+    </sources>
+    <sharedListeners>
+      <add initializeData="C:\Documents and Settings\kphifer\My Documents\LocalData\Projects\ClaimsDocsSolution\ClaimsDocsBizLogic\App_messages.svclog" type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="ServiceModelMessageLoggingListener" traceOutputOptions="Timestamp">
+        <filter type="" />
+      </add>
+      <add initializeData="C:\Documents and Settings\kphifer\My Documents\LocalData\Projects\ClaimsDocsSolution\ClaimsDocsBizLogic\App_tracelog.svclog" type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" name="ServiceModelTraceListener" traceOutputOptions="Timestamp">
+        <filter type="" />
+      </add>
+    </sharedListeners>
+  </system.diagnostics>
+  <system.web>
+    <compilation debug="true" />
+  </system.web>
+  <!-- When deploying the service library project, the content of the config file must be added to the host's 
+  app.config file. System.Configuration does not support config files for libraries. -->
+  <system.serviceModel>
+    <diagnostics performanceCounters="Off">
+      <messageLogging logEntireMessage="true" logMalformedMessages="false" logMessagesAtServiceLevel="true" logMessagesAtTransportLevel="false" />
+    </diagnostics>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="DocumentStorageWSSoap" />
+      </basicHttpBinding>
+      <customBinding>
+        <binding name="DocumentStorageWSSoap12">
+          <textMessageEncoding messageVersion="Soap12" />
+          <httpTransport />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://aihitqaautosrv.alpha.accessgeneral.com/DocumentStorageWS/DocumentStorageWS.asmx"
+        binding="basicHttpBinding" bindingConfiguration="DocumentStorageWSSoap"
+        contract="DocumentStorageWS1.DocumentStorageWSSoap" name="DocumentStorageWSSoap" />
+      <endpoint address="http://aihitqaautosrv.alpha.accessgeneral.com/DocumentStorageWS/DocumentStorageWS.asmx"
+        binding="customBinding" bindingConfiguration="DocumentStorageWSSoap12"
+        contract="DocumentStorageWS1.DocumentStorageWSSoap" name="DocumentStorageWSSoap12" />
+    </client>
+    <services>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDSupportBehavior"
+        name="ClaimsDocsBizLogic.CDSupport">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDSupport">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic:7001/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDGroupsBehavior"
+        name="ClaimsDocsBizLogic.CDGroups">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDGroups">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7002/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDUsersBehavior"
+        name="ClaimsDocsBizLogic.CDUsers">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDUsers">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7003/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDepartmentsBehavior"
+        name="ClaimsDocsBizLogic.CDDepartments">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDDepartments">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7004/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDProgramBehavior"
+        name="ClaimsDocsBizLogic.CDProgram">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDProgram">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7005/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDocumentBehavior"
+        name="ClaimsDocsBizLogic.CDDocument">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDDocument">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7006/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDocumentFieldBehavior"
+        name="ClaimsDocsBizLogic.CDDocumentField">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDDocumentField">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7007/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDocumentGeneratorBehavior"
+        name="ClaimsDocsBizLogic.CDDocumentGenerator">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.ICDDocumentGenerator">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7008/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.ClaimsDocsGeneratorBehavior"
+        name="ClaimsDocsBizLogic.ClaimsDocsGenerator">
+        <endpoint address="" binding="basicHttpBinding" bindingConfiguration=""
+          contract="ClaimsDocsBizLogic.IClaimsDocsGenerator">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://testwss06a:7009/ClaimsDocsBizLogic/" />
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="ClaimsDocsBizLogic.Service1Behavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDSupportBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDGroupsBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDUsersBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDepartmentsBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDProgramBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDocumentBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDocumentFieldBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDocumentGeneratorBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.ClaimsDocsGeneratorBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="NewBehavior">
+          <serviceThrottling maxConcurrentCalls="3000" maxConcurrentSessions="3000" maxConcurrentInstances="3000" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+  <applicationSettings>
+    <ClaimsDocsBizLogic.Properties.Settings>
+      <setting name="RunMode" serializeAs="String">
+        <value>ITQA</value>
+      </setting>
+      <setting name="DEVCorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Correspondence;User ID=website; password=;</value>
+      </setting>
+      <setting name="ITQACorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=ITQASQL02.alpha.accessgeneral.com;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="DEVXMLOutputLocation" serializeAs="String">
+        <value>\\devweb02\c$\inetpub\wwwroot\ClaimsDocsClient\XMLOutputLocation\</value>
+      </setting>
+      <setting name="DEVClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Claims;User ID=website; password=</value>
+      </setting>
+      <setting name="DEVAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=AIHDEVSQL2K5;Initial Catalog=AMS;User ID=website;Password=</value>
+      </setting>
+      <setting name="DEVClaimsDocsDBConnectionString" serializeAs="String">
+        <value>data source=DEVPOLCLMSQL;initial catalog=ClaimsDocs;User ID=website; password=;</value>
+      </setting>
+      <setting name="ITQAXMLOutputLocation" serializeAs="String">
+        <value>\\GAVWSSQ01\c$\inetpub\wwwroot\ClaimsDocsBizLogic\XMLOutputLocation\</value>
+      </setting>
+      <setting name="ITQAAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=AIHITQASQL2K5.alpha.accessgeneral.com\biztalk;Initial Catalog=AMS;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="ITQAClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=ITQASQL22;initial catalog=Claims;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="ITQAClaimsDocsDBConnectionString" serializeAs="String">
+        <value>Data Source=ITQASQL02.alpha.accessgeneral.com;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="DEVGenesisDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Genesis;User ID=website; password=;</value>
+      </setting>
+      <setting name="ITQAGenesisDBConnecionString" serializeAs="String">
+        <value>Data Source=ITQASQL23;Initial Catalog=Genesis;Application Name=ClaimsDocsBizLogic;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="DEVMACHINEAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=AIHDEVSQL2K5;Initial Catalog=AMS;User ID=website;Password=</value>
+      </setting>
+      <setting name="DEVMACHINEClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Claims;User ID=website; password=</value>
+      </setting>
+      <setting name="DEVMACHINEClaimsDocsDBConnectionString" serializeAs="String">
+        <value>data source=DEVPOLCLMSQL;Integrated Security=True;initial catalog=ClaimsDocs</value>
+      </setting>
+      <setting name="DEVMACHINECorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql.development.accessgeneral.com;Initial Catalog=Correspondence;User ID=website; password=;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="DEVMACHINEGenesisDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql.development.accessgeneral.com;Initial Catalog=Genesis;User ID=website; password=;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="DEVMACHINEXMLOutputLocation" serializeAs="String">
+        <value>\\dev016dnet.accessgeneral.com\c$\Documents and Settings\kphifer\My Documents\LocalData\ProjectInfo\Claims\DataSamples\ClaimsDocsOuput\</value>
+      </setting>
+      <setting name="DEVXMLUNCOutputLocation" serializeAs="String">
+        <value>http://devweb02/ClaimsDocsClient/XMLOutputLocation/</value>
+      </setting>
+      <setting name="DEVMACHINEXMLUNCOutputLocation" serializeAs="String">
+        <value>\\dev016dnet.accessgeneral.com\c$\Documents and Settings\kphifer\My Documents\LocalData\ProjectInfo\Claims\DataSamples\ClaimsDocsOuput\</value>
+      </setting>
+      <setting name="ITQAXMLUNCOutputLocation" serializeAs="String">
+        <value>http://GAVWSSQ01/ClaimsDocsBizLogic/XMLOutputLocation/</value>
+      </setting>
+      <setting name="DEVDocumakerReplyQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHDevAutoSrv01\private$\claimsdocs_replyq</value>
+      </setting>
+      <setting name="DEVDocumakerRequestQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHDevAutoSrv01\private$\claimsdocs_requestq</value>
+      </setting>
+      <setting name="DEVDocumakerEnvironment" serializeAs="String">
+        <value>AIH_LETTERS_DEV</value>
+      </setting>
+      <setting name="DEVDocumakerUNCRoot" serializeAs="String">
+        <value>\\AIHDEVIDOCUMAKER</value>
+      </setting>
+      <setting name="DocuMakerReceiveTimeout" serializeAs="String">
+        <value>00:00:30</value>
+      </setting>
+      <setting name="DocuMakerPeekPauseInSeconds" serializeAs="String">
+        <value>1</value>
+      </setting>
+      <setting name="DocumentGenerator" serializeAs="String">
+        <value>DocuMaker</value>
+      </setting>
+      <setting name="DocuMakerNumberOfTries" serializeAs="String">
+        <value>2</value>
+      </setting>
+      <setting name="ClaimsDocsNameSpace" serializeAs="String">
+        <value>TBD</value>
+      </setting>
+      <setting name="ImageRightClaimsDrawer" serializeAs="String">
+        <value>CLMS</value>
+      </setting>
+      <setting name="ImageRightReason" serializeAs="String">
+        <value>ClaimsDocs Generated Document</value>
+      </setting>
+      <setting name="ImageRightFlowID" serializeAs="String">
+        <value>27</value>
+      </setting>
+      <setting name="ImageRightStepID" serializeAs="String">
+        <value>1</value>
+      </setting>
+      <setting name="ImageRightDescription" serializeAs="String">
+        <value>ClaimsDocs Generated Document</value>
+      </setting>
+      <setting name="ImageRightPriority" serializeAs="String">
+        <value>5</value>
+      </setting>
+      <setting name="ITQADocumakerEnvironment" serializeAs="String">
+        <value>AIH_LETTERS_ITQA</value>
+      </setting>
+      <setting name="ITQADocumakerReplyQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHITQAAutoSrv\PRIVATE$\ids_replyq</value>
+      </setting>
+      <setting name="ITQADocumakerRequestQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHITQAAutoSrv\PRIVATE$\ids_requestq</value>
+      </setting>
+      <setting name="ITQADocumakerUNCRoot" serializeAs="String">
+        <value>\\AIHITQADocuPresentment.alpha.accessgeneral.com</value>
+      </setting>
+      <setting name="DEVMACHINEClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\dev016dnet.accessgeneral.com\c$\Documents and Settings\kphifer\My Documents\LocalData\Projects\ClaimsDocsSolution\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      <setting name="DEVClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\devweb02\c$\inetpub\wwwroot\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      <setting name="ITQAClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\GAVWSSQ01\c$\inetpub\wwwroot\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      <setting name="DEVMACHINESmtpHost" serializeAs="String">
+        <value>AIHEXCH01.accessgeneral.com</value>
+      </setting>
+      <setting name="DEVSmtpHost" serializeAs="String">
+        <value>AIHEXCH01.accessgeneral.com</value>
+      </setting>
+      <setting name="ITQASmtpHost" serializeAs="String">
+        <value>AIHEXCH01.accessgeneral.com</value>
+      </setting>
+      <setting name="EMailDeclineSubject" serializeAs="String">
+        <value>ClaimsDocs : Document Declined Details</value>
+      </setting>
+      <setting name="PRODAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=PRODSQL11\IA;Initial Catalog=AMS;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="PRODClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=PRODSQL06\CLAIMS;initial catalog=Claims;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="PRODClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\Prodwss06a\c$\inetpub\wwwroot\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      <setting name="PRODClaimsDocsDBConnectionString" serializeAs="String">
+        <value>Data Source=PRODSAS01\KATMAI;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="PRODGenesisDBConnecionString" serializeAs="String">
+        <value>Data Source=PRODSQL05\POLICY;Initial Catalog=Genesis;Application Name=ClaimsDocsBizLogic;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="PRODCorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=PRODSAS01\KATMAI;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="PRODDocumakerEnvironment" serializeAs="String">
+        <value>AIH_LETTERS_PROD</value>
+      </setting>
+      <setting name="PRODDocumakerReplyQueue" serializeAs="String">
+        <value>FormatName:DIRECT=TCP:AIHPRODWS08\private$\ids_replyq</value>
+      </setting>
+      <setting name="PRODDocumakerRequestQueue" serializeAs="String">
+        <value>FormatName:DIRECT=TCP:AIHPRODWS08\private$\ids_requestq</value>
+      </setting>
+      <setting name="PRODDocumakerUNCRoot" serializeAs="String">
+        <value>\\AIHDocuPresentment</value>
+      </setting>
+      <setting name="PRODSmtpHost" serializeAs="String">
+        <value>AIHEXCH01.accessgeneral.com</value>
+      </setting>
+      <setting name="PRODXMLOutputLocation" serializeAs="String">
+        <value>\\Prodwss06a\c$\inetpub\wwwroot\ClaimsDocsBizLogic\XMLOutputLocation\</value>
+      </setting>
+      <setting name="PRODXMLUNCOutputLocation" serializeAs="String">
+        <value>http://Prodwss06a/ClaimsDocsBizLogic/XMLOutputLocation/</value>
+      </setting>
+      <setting name="UATAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=TESTSQL04;Initial Catalog=AMS;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="UATClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=TESTSQL01\Claims;initial catalog=Claims;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="UATClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\TESTWSS06A\c$\inetpub\wwwroot\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      <setting name="UATClaimsDocsDBConnectionString" serializeAs="String">
+        <value>Data Source=TESTSQL08;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="UATGenesisDBConnecionString" serializeAs="String">
+        <value>Data Source=POLICY_UAT;Initial Catalog=Genesis;Application Name=ClaimsDocsBizLogic;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="UATCorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=TESTSQL08;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="UATDocumakerEnvironment" serializeAs="String">
+        <value>AIH_LETTERS_UAT</value>
+      </setting>
+      <setting name="UATDocumakerReplyQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:TESTWSS05\private$\ids_replyq</value>
+      </setting>
+      <setting name="UATDocumakerRequestQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:TESTWSS05\private$\ids_requestq</value>
+      </setting>
+      <setting name="UATDocumakerUNCRoot" serializeAs="String">
+        <value>\\TESTAPP10</value>
+      </setting>
+      <setting name="UATSmtpHost" serializeAs="String">
+        <value>AIHEXCH01.accessgeneral.com</value>
+      </setting>
+      <setting name="UATXMLOutputLocation" serializeAs="String">
+        <value>\\TESTWSS06A\c$\inetpub\wwwroot\ClaimsDocsBizLogic\XMLOutputLocation\</value>
+      </setting>
+      <setting name="UATXMLUNCOutputLocation" serializeAs="String">
+        <value>http://TESTWSS06A/ClaimsDocsBizLogic/XMLOutputLocation/</value>
+      </setting>
+      <setting name="NumberOfResponseTries" serializeAs="String">
+        <value>3</value>
+      </setting>
+      <setting name="MessageQueueLoopTries" serializeAs="String">
+        <value>10</value>
+      </setting>
+    </ClaimsDocsBizLogic.Properties.Settings>
+  </applicationSettings>
+</configuration>

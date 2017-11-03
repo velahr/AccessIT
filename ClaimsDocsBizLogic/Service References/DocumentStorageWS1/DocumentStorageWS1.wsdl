@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.accessgeneral.com/DocumentStorage/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.accessgeneral.com/schemas/DocumentGeneration/DocumentInfoV1.0" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s2="http://microsoft.com/wsdl/types/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.accessgeneral.com/DocumentStorage/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.accessgeneral.com/DocumentStorage/">
+      <s:import namespace="http://www.accessgeneral.com/schemas/DocumentGeneration/DocumentInfoV1.0" />
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="SaveDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentTrx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionID" type="s2:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDocumentTrxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveExceptions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveExceptionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveExceptionsTrx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionID" type="s2:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveExceptionsTrxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentTrx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionID" type="s2:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDocumentTrxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentInfo" type="s1:DocumentInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vars" type="tns:ArrayOfDocumentInfoVar" />
+            <s:element minOccurs="0" maxOccurs="1" name="docKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDocumentInfoVar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DocumentInfoVar" nillable="true" type="s1:DocumentInfoVar" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateTaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTaskResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTaskTrx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionID" type="s2:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="vars" type="tns:ArrayOfDocumentInfoVar" />
+            <s:element minOccurs="0" maxOccurs="1" name="docKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateTaskTrxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateTaskTrxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindDocument">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionID" type="s2:guid" />
+            <s:element minOccurs="0" maxOccurs="1" name="vars" type="tns:ArrayOfDocumentInfoVar" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FindDocumentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="vars" type="tns:ArrayOfDocumentInfoVar" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.accessgeneral.com/schemas/DocumentGeneration/DocumentInfoV1.0">
+      <s:complexType name="DocumentInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DocKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DocPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DocURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DocType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="DocDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="TransType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Drawer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="FileNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" form="unqualified" name="Vars" type="s1:ArrayOfDocumentInfoVar" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDocumentInfoVar">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="Var">
+            <s:complexType>
+              <s:attribute name="Name" type="s:string" />
+              <s:attribute name="Value" type="s:string" />
+            </s:complexType>
+          </s:element>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DocumentInfoVar">
+        <s:attribute name="Name" type="s:string" />
+        <s:attribute name="Value" type="s:string" />
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaveDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDocument" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentTrxSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDocumentTrx" />
+  </wsdl:message>
+  <wsdl:message name="SaveDocumentTrxSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDocumentTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveExceptionsSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveExceptions" />
+  </wsdl:message>
+  <wsdl:message name="SaveExceptionsSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveExceptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveExceptionsTrxSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveExceptionsTrx" />
+  </wsdl:message>
+  <wsdl:message name="SaveExceptionsTrxSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveExceptionsTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocument" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentTrxSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDocumentTrx" />
+  </wsdl:message>
+  <wsdl:message name="GetDocumentTrxSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDocumentTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTaskSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTask" />
+  </wsdl:message>
+  <wsdl:message name="CreateTaskSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateTaskTrxSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateTaskTrx" />
+  </wsdl:message>
+  <wsdl:message name="CreateTaskTrxSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateTaskTrxResponse" />
+  </wsdl:message>
+  <wsdl:message name="FindDocumentSoapIn">
+    <wsdl:part name="parameters" element="tns:FindDocument" />
+  </wsdl:message>
+  <wsdl:message name="FindDocumentSoapOut">
+    <wsdl:part name="parameters" element="tns:FindDocumentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DocumentStorageWSSoap">
+    <wsdl:operation name="SaveDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">OBSOLETE Saves the document into storage solution (i.e. ImageRight) and returns a document key.</wsdl:documentation>
+      <wsdl:input message="tns:SaveDocumentSoapIn" />
+      <wsdl:output message="tns:SaveDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Saves the document into storage solution (i.e. ImageRight) and returns a document key.</wsdl:documentation>
+      <wsdl:input message="tns:SaveDocumentTrxSoapIn" />
+      <wsdl:output message="tns:SaveDocumentTrxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveExceptions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">OBSOLETE Saves the Exceptions document into storage solution (i.e. ImageRight) and returns a document info.</wsdl:documentation>
+      <wsdl:input message="tns:SaveExceptionsSoapIn" />
+      <wsdl:output message="tns:SaveExceptionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveExceptionsTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Saves the Exceptions document into storage solution (i.e. ImageRight) and returns a document info.</wsdl:documentation>
+      <wsdl:input message="tns:SaveExceptionsTrxSoapIn" />
+      <wsdl:output message="tns:SaveExceptionsTrxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">OBSOLETE Gets the path to the document based on various criteria.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentSoapIn" />
+      <wsdl:output message="tns:GetDocumentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Gets the path to the document based on various criteria.</wsdl:documentation>
+      <wsdl:input message="tns:GetDocumentTrxSoapIn" />
+      <wsdl:output message="tns:GetDocumentTrxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTask">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">OBSOLETE Creates a workflow task based on various criteria.</wsdl:documentation>
+      <wsdl:input message="tns:CreateTaskSoapIn" />
+      <wsdl:output message="tns:CreateTaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTaskTrx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates a workflow task based on various criteria.</wsdl:documentation>
+      <wsdl:input message="tns:CreateTaskTrxSoapIn" />
+      <wsdl:output message="tns:CreateTaskTrxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FindDocument">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Finds a Document based on various criteria.</wsdl:documentation>
+      <wsdl:input message="tns:FindDocumentSoapIn" />
+      <wsdl:output message="tns:FindDocumentSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DocumentStorageWSHttpGet" />
+  <wsdl:portType name="DocumentStorageWSHttpPost" />
+  <wsdl:binding name="DocumentStorageWSSoap" type="tns:DocumentStorageWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveDocument">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentTrx">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveDocumentTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExceptions">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveExceptions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExceptionsTrx">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveExceptionsTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/GetDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTrx">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/GetDocumentTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTask">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/CreateTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTaskTrx">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/CreateTaskTrx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocument">
+      <soap:operation soapAction="http://www.accessgeneral.com/DocumentStorage/FindDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DocumentStorageWSSoap12" type="tns:DocumentStorageWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaveDocument">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDocumentTrx">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveDocumentTrx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExceptions">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveExceptions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveExceptionsTrx">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/SaveExceptionsTrx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/GetDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTrx">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/GetDocumentTrx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTask">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/CreateTask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTaskTrx">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/CreateTaskTrx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindDocument">
+      <soap12:operation soapAction="http://www.accessgeneral.com/DocumentStorage/FindDocument" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DocumentStorageWSHttpGet" type="tns:DocumentStorageWSHttpGet">
+    <http:binding verb="GET" />
+  </wsdl:binding>
+  <wsdl:binding name="DocumentStorageWSHttpPost" type="tns:DocumentStorageWSHttpPost">
+    <http:binding verb="POST" />
+  </wsdl:binding>
+  <wsdl:service name="DocumentStorageWS">
+    <wsdl:port name="DocumentStorageWSSoap" binding="tns:DocumentStorageWSSoap">
+      <soap:address location="http://localhost:4704/DocumentStorageWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DocumentStorageWSSoap12" binding="tns:DocumentStorageWSSoap12">
+      <soap12:address location="http://localhost:4704/DocumentStorageWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DocumentStorageWSHttpGet" binding="tns:DocumentStorageWSHttpGet">
+      <http:address location="http://localhost:4704/DocumentStorageWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DocumentStorageWSHttpPost" binding="tns:DocumentStorageWSHttpPost">
+      <http:address location="http://localhost:4704/DocumentStorageWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="ClaimsDocsBizLogic.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <system.web>
+    <compilation debug="true" />
+        <identity impersonate="false" />
+  </system.web>
+  <!-- When deploying the service library project, the content of the config file must be added to the host's 
+  app.config file. System.Configuration does not support config files for libraries. -->
+  <system.serviceModel>
+	  <diagnostics performanceCounters="All" />
+    <bindings>
+      <basicHttpBinding>
+        <binding name="IRWebServiceSoap" closeTimeout="00:01:00" openTimeout="00:01:00" receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false" bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard" maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536" messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered" useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384" maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None" realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://aihitqawsir01.alpha.accessgeneral.com/irwebservice/irwebservice.asmx" binding="basicHttpBinding" bindingConfiguration="IRWebServiceSoap" contract="ImageRightWS.IRWebServiceSoap" name="IRWebServiceSoap" />
+    </client>
+    <services>      
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDSupportBehavior" name="ClaimsDocsBizLogic.CDSupport">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDSupport">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDSupport/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDGroupsBehavior" name="ClaimsDocsBizLogic.CDGroups">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDGroups">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDGroups/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDUsersBehavior" name="ClaimsDocsBizLogic.CDUsers">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDUsers">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDUsers/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDepartmentsBehavior" name="ClaimsDocsBizLogic.CDDepartments">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDDepartments">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDDepartments/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDProgramBehavior" name="ClaimsDocsBizLogic.CDProgram">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDProgram">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDProgram/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDocumentBehavior" name="ClaimsDocsBizLogic.CDDocument">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDDocument">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDDocument/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDocumentFieldBehavior" name="ClaimsDocsBizLogic.CDDocumentField">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDDocumentField">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDDocumentField/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.CDDocumentGeneratorBehavior" name="ClaimsDocsBizLogic.CDDocumentGenerator">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.ICDDocumentGenerator">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/CDDocumentGenerator/" />
+          </baseAddresses>
+        </host>
+      </service>
+      <service behaviorConfiguration="ClaimsDocsBizLogic.ClaimsDocsGeneratorBehavior" name="ClaimsDocsBizLogic.ClaimsDocsGenerator">
+        <endpoint address="" binding="basicHttpBinding" contract="ClaimsDocsBizLogic.IClaimsDocsGenerator">
+          <identity>
+            <dns value="localhost" />
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange" />
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsGenerator/" />
+          </baseAddresses>
+        </host>
+      </service>
+    </services>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="ClaimsDocsBizLogic.Service1Behavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDSupportBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDGroupsBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDUsersBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDepartmentsBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDProgramBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDocumentBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDocumentFieldBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.CDDocumentGeneratorBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+        <behavior name="ClaimsDocsBizLogic.ClaimsDocsGeneratorBehavior">
+          <serviceMetadata httpGetEnabled="true" />
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+  <applicationSettings>
+    <ClaimsDocsBizLogic.Properties.Settings>
+      <setting name="RunMode" serializeAs="String">
+        <value>ITQA</value>
+      </setting>
+      <setting name="DEVCorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Correspondence;User ID=website; password=;</value>
+      </setting>
+      <setting name="ITQACorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=ITQAPOLCLMSQL.alpha.AccessGeneral.com\CLM01;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="UATCorrespondenceConnectionString" serializeAs="String">
+        <value>TBD</value>
+      </setting>
+      <setting name="PRODCorrespondenceConnectionString" serializeAs="String">
+        <value>TBDA</value>
+      </setting>
+      <setting name="DEVXMLOutputLocation" serializeAs="String">
+        <value>\\devweb02\c$\inetpub\wwwroot\ClaimsDocsClient\XMLOutputLocation\</value>
+      </setting>
+      <setting name="DEVClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Claims;User ID=website; password=</value>
+      </setting>
+      <setting name="DEVAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=AIHDEVSQL2K5;Initial Catalog=AMS;User ID=website;Password=</value>
+      </setting>
+      <setting name="DEVClaimsDocsDBConnectionString" serializeAs="String">
+        <value>data source=DEVPOLCLMSQL;initial catalog=ClaimsDocs;User ID=website; password=;</value>
+      </setting>
+      <setting name="ITQAXMLOutputLocation" serializeAs="String">
+        <value>\\GAVWSSQ01\c$\inetpub\wwwroot\ClaimsDocsBizLogic\XMLOutputLocation\</value>
+      </setting>
+      <setting name="ITQAAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=AIHITQASQL2K5.alpha.accessgeneral.com;Initial Catalog=AMS;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="ITQAClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=TESTSQL22;initial catalog=Claims;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="ITQAClaimsDocsDBConnectionString" serializeAs="String">
+        <value>Data Source=ITQAPOLCLMSQL.alpha.AccessGeneral.com\CLM01;initial catalog=ClaimsDocs;Application Name=ClaimsDocsBizLogic;Trusted_Connection=Yes;</value>
+      </setting>
+      <setting name="DEVGenesisDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Genesis;User ID=website; password=;</value>
+      </setting>
+      <setting name="ITQAGenesisDBConnecionString" serializeAs="String">
+        <value>Data Source=ITQAPOLCLMSQL.alpha.AccessGeneral.com\POL01;Initial Catalog=Genesis;Application Name=ClaimsDocsBizLogic;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="DEVMACHINEAMSDBConnectionString" serializeAs="String">
+        <value>Data Source=AIHDEVSQL2K5;Initial Catalog=AMS;User ID=website;Password=</value>
+      </setting>
+      <setting name="DEVMACHINEClaimsDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql;Initial Catalog=Claims;User ID=website; password=</value>
+      </setting>
+      <setting name="DEVMACHINEClaimsDocsDBConnectionString" serializeAs="String">
+        <value>data source=DEVPOLCLMSQL;Integrated Security=True;initial catalog=ClaimsDocs</value>
+      </setting>
+      <setting name="DEVMACHINECorrespondenceConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql.development.accessgeneral.com;Initial Catalog=Correspondence;User ID=website; password=;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="DEVMACHINEGenesisDBConnectionString" serializeAs="String">
+        <value>Data Source=devpolclmsql.development.accessgeneral.com;Initial Catalog=Genesis;User ID=website; password=;Trusted_Connection=True;</value>
+      </setting>
+      <setting name="DEVMACHINEXMLOutputLocation" serializeAs="String">
+        <value>\\dev016dnet.accessgeneral.com\c$\Documents and Settings\kphifer\My Documents\LocalData\ProjectInfo\Claims\DataSamples\ClaimsDocsOuput\</value>
+      </setting>
+      <setting name="DEVXMLUNCOutputLocation" serializeAs="String">
+        <value>http://devweb02/ClaimsDocsClient/XMLOutputLocation/</value>
+      </setting>
+      <setting name="DEVMACHINEXMLUNCOutputLocation" serializeAs="String">
+        <value>\\dev016dnet.accessgeneral.com\c$\Documents and Settings\kphifer\My Documents\LocalData\ProjectInfo\Claims\DataSamples\ClaimsDocsOuput\</value>
+      </setting>
+      <setting name="ITQAXMLUNCOutputLocation" serializeAs="String">
+        <value>http://GAVWSSQ01/ClaimsDocsBizLogic/XMLOutputLocation/</value>
+      </setting>
+      <setting name="PRODXMLUNCOutputLocation" serializeAs="String">
+        <value>TBD</value>
+      </setting>
+      <setting name="DEVDocumakerReplyQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHDevAutoSrv01\private$\claimsdocs_replyq</value>
+      </setting>
+      <setting name="DEVDocumakerRequestQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHDevAutoSrv01\private$\claimsdocs_requestq</value>
+      </setting>
+      <setting name="DEVDocumakerEnvironment" serializeAs="String">
+        <value>AIH_LETTERS_DEV</value>
+      </setting>
+      <setting name="DEVDocumakerUNCRoot" serializeAs="String">
+        <value>\\AIHDEVIDOCUMAKER</value>
+      </setting>
+      <setting name="DocuMakerReceiveTimeout" serializeAs="String">
+        <value>00:00:10</value>
+      </setting>
+      <setting name="DocuMakerPeekPauseInSeconds" serializeAs="String">
+        <value>1</value>
+      </setting>
+      <setting name="DocumentGenerator" serializeAs="String">
+        <value>DocuMaker</value>
+      </setting>
+      <setting name="DocuMakerNumberOfTries" serializeAs="String">
+        <value>5</value>
+      </setting>
+      <setting name="ClaimsDocsNameSpace" serializeAs="String">
+        <value>TBD</value>
+      </setting>
+      <setting name="ImageRightClaimsDrawer" serializeAs="String">
+        <value>CLMS</value>
+      </setting>
+      <setting name="ImageRightReason" serializeAs="String">
+        <value>ClaimsDocs Generated Document</value>
+      </setting>
+      <setting name="ImageRightFlowID" serializeAs="String">
+        <value>27</value>
+      </setting>
+      <setting name="ImageRightStepID" serializeAs="String">
+        <value>1</value>
+      </setting>
+      <setting name="ImageRightDescription" serializeAs="String">
+        <value>ClaimsDocs Generated Document</value>
+      </setting>
+      <setting name="ImageRightPriority" serializeAs="String">
+        <value>5</value>
+      </setting>
+      <setting name="DEVMACHINEImageRightWSURL" serializeAs="String">
+        <value>http://aihirwsdev01.development/irwebservice/irwebservice.asmx</value>
+      </setting>
+      <setting name="DEVMACHINEImageRightLogin" serializeAs="String">
+        <value>ADMIN</value>
+      </setting>
+      <setting name="DEVMACHINEImageRightPassword" serializeAs="String">
+        <value>IRADMIN</value>
+      </setting>
+      <setting name="DEVImageRightWSURL" serializeAs="String">
+        <value>http://aihirwsdev01.development.accessgeneral.com/irwebservice/irwebservice.asmx</value>
+      </setting>
+      <setting name="DEVImageRightLogin" serializeAs="String">
+        <value>ADMIN</value>
+      </setting>
+      <setting name="DEVImageRightPassword" serializeAs="String">
+        <value>IRADMIN</value>
+      </setting>
+      <setting name="ITQADocumakerEnvironment" serializeAs="String">
+        <value>AIH_LETTERS_ITQA</value>
+      </setting>
+      <setting name="ITQADocumakerReplyQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHITQAAutoSrv\PRIVATE$\ids_replyq</value>
+      </setting>
+      <setting name="ITQADocumakerRequestQueue" serializeAs="String">
+        <value>FormatName:DIRECT=OS:AIHITQAAutoSrv\PRIVATE$\ids_requestq</value>
+      </setting>
+      <setting name="ITQADocumakerUNCRoot" serializeAs="String">
+        <value>\\AIHITQADocuPresentment</value>
+      </setting>
+      <setting name="ITQAImageRightLogin" serializeAs="String">
+        <value>ADMIN</value>
+      </setting>
+      <setting name="ITQAImageRightPassword" serializeAs="String">
+        <value>IRADMIN</value>
+      </setting>
+      <setting name="ITQAImageRightWSURL" serializeAs="String">
+        <value>http://aihitqawsir01.alpha.accessgeneral.com/irwebservice/irwebservice.asmx</value>
+      </setting>	  
+      <setting name="DEVMACHINEClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\dev016dnet.accessgeneral.com\c$\Documents and Settings\kphifer\My Documents\LocalData\Projects\ClaimsDocsSolution\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      <setting name="DEVClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\devweb02\c$\inetpub\wwwroot\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      <setting name="ITQAClaimsDocsBizLogicLogFile" serializeAs="String">
+        <value>\\GAVWSSQ01\c$\inetpub\wwwroot\ClaimsDocsBizLogic\ClaimsDocsBizLogicLog\ClaimsDocsBizLogicLogFile.txt</value>
+      </setting>
+      
+    </ClaimsDocsBizLogic.Properties.Settings>
+  </applicationSettings>
+</configuration>
