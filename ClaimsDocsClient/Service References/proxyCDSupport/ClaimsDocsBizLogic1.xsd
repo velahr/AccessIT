@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ClaimsDocsLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaimsDocsLogID" type="xs:int" />
+      <xs:element minOccurs="0" name="ExceptionIs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IUDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LogSourceTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="LogTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="LogTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageIs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTraceIs" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClaimsDocsLog" nillable="true" type="tns:ClaimsDocsLog" />
+  <xs:complexType name="ArrayOfClaimsDocsLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClaimsDocsLog" nillable="true" type="tns:ClaimsDocsLog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClaimsDocsLog" nillable="true" type="tns:ArrayOfClaimsDocsLog" />
+  <xs:complexType name="ValidateResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ValidCheck" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ValidationFocus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValidationResultMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateResult" nillable="true" type="tns:ValidateResult" />
+  <xs:complexType name="EMailSendRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromEMailAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToEMailAddress" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EMailSendRequest" nillable="true" type="tns:EMailSendRequest" />
+</xs:schema>

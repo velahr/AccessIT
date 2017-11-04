@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="CDGroups" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICDGroups_GroupCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GroupCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDGroups_GroupCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GroupCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDGroups_GroupRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:GroupRead" />
+  </wsdl:message>
+  <wsdl:message name="ICDGroups_GroupRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GroupReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDGroups_GroupUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GroupUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ICDGroups_GroupUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GroupUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDGroups_GroupSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GroupSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDGroups_GroupSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GroupSearchResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICDGroups">
+    <wsdl:operation name="GroupCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDGroups/GroupCreate" message="tns:ICDGroups_GroupCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDGroups/GroupCreateResponse" message="tns:ICDGroups_GroupCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDGroups/GroupRead" message="tns:ICDGroups_GroupRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDGroups/GroupReadResponse" message="tns:ICDGroups_GroupRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDGroups/GroupUpdate" message="tns:ICDGroups_GroupUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDGroups/GroupUpdateResponse" message="tns:ICDGroups_GroupUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDGroups/GroupSearch" message="tns:ICDGroups_GroupSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDGroups/GroupSearchResponse" message="tns:ICDGroups_GroupSearch_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICDGroups" type="tns:ICDGroups">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GroupCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDGroups/GroupCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupRead">
+      <soap:operation soapAction="http://tempuri.org/ICDGroups/GroupRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupUpdate">
+      <soap:operation soapAction="http://tempuri.org/ICDGroups/GroupUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDGroups/GroupSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CDGroups">
+    <wsdl:port name="BasicHttpBinding_ICDGroups" binding="tns:BasicHttpBinding_ICDGroups">
+      <soap:address location="http://testwss06a.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDGroups.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

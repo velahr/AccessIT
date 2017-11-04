@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+  <xs:element name="ClaimsDocsLogCreate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objClaimsDocsLog" nillable="true" type="q1:ClaimsDocsLog" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClaimsDocsLogCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClaimsDocsLogCreateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClaimsDocsLogSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSQLString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClaimsDocsLogSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ClaimsDocsLogSearchResult" nillable="true" type="q2:ArrayOfClaimsDocsLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateWCFServiceCall">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateWCFServiceCallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateWCFServiceCallResult" nillable="true" type="q3:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateXMLOutputLocation">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateXMLOutputLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateXMLOutputLocationResult" nillable="true" type="q4:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateMessageQueue">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateMessageQueueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateMessageQueueResult" nillable="true" type="q5:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateClaimsDBConnection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateClaimsDBConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateClaimsDBConnectionResult" nillable="true" type="q6:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateClaimsDocsDBConnection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateClaimsDocsDBConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateClaimsDocsDBConnectionResult" nillable="true" type="q7:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateCorrespondenceDBConnection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateCorrespondenceDBConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateCorrespondenceDBConnectionResult" nillable="true" type="q8:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAMSDBConnection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAMSDBConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateAMSDBConnectionResult" nillable="true" type="q9:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateGenesisDBConnection">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateGenesisDBConnectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateGenesisDBConnectionResult" nillable="true" type="q10:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAMSPointToClaimsLinkedServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intClaimUKey" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAMSPointToClaimsLinkedServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateAMSPointToClaimsLinkedServerResult" nillable="true" type="q11:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAMSPointToGenesisLinkedServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strPolicyNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAMSPointToGenesisLinkedServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateAMSPointToGenesisLinkedServerResult" nillable="true" type="q12:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateClaimsPointToGenesisLinkedServer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intContactUKey" type="xs:int" />
+        <xs:element minOccurs="0" name="intVehicleFound" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateClaimsPointToGenesisLinkedServerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="ValidateClaimsPointToGenesisLinkedServerResult" nillable="true" type="q13:ValidateResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressRegEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strAddresseeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAddressLine1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strState" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strZipCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAddressRegExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateAddressRegExResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEMailMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objEMailSendRequest" nillable="true" type="q14:EMailSendRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendEMailMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SendEMailMessageResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

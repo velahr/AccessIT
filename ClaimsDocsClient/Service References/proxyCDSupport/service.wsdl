@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="CDSupport" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICDSupport_ClaimsDocsLogCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimsDocsLogCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ClaimsDocsLogCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimsDocsLogCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ClaimsDocsLogSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimsDocsLogSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ClaimsDocsLogSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ClaimsDocsLogSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateWCFServiceCall_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateWCFServiceCall" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateWCFServiceCall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateWCFServiceCallResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateXMLOutputLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateXMLOutputLocation" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateXMLOutputLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateXMLOutputLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateMessageQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateMessageQueue" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateMessageQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateMessageQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateClaimsDBConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateClaimsDBConnection" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateClaimsDBConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateClaimsDBConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateClaimsDocsDBConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateClaimsDocsDBConnection" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateClaimsDocsDBConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateClaimsDocsDBConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateCorrespondenceDBConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCorrespondenceDBConnection" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateCorrespondenceDBConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateCorrespondenceDBConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAMSDBConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAMSDBConnection" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAMSDBConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAMSDBConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateGenesisDBConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateGenesisDBConnection" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateGenesisDBConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateGenesisDBConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAMSPointToClaimsLinkedServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAMSPointToClaimsLinkedServer" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAMSPointToClaimsLinkedServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAMSPointToClaimsLinkedServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAMSPointToGenesisLinkedServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAMSPointToGenesisLinkedServer" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAMSPointToGenesisLinkedServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAMSPointToGenesisLinkedServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateClaimsPointToGenesisLinkedServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateClaimsPointToGenesisLinkedServer" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateClaimsPointToGenesisLinkedServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateClaimsPointToGenesisLinkedServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAddressRegEx_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressRegEx" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_ValidateAddressRegEx_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAddressRegExResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_SendEMailMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEMailMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICDSupport_SendEMailMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEMailMessageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICDSupport">
+    <wsdl:operation name="ClaimsDocsLogCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ClaimsDocsLogCreate" message="tns:ICDSupport_ClaimsDocsLogCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ClaimsDocsLogCreateResponse" message="tns:ICDSupport_ClaimsDocsLogCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ClaimsDocsLogSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ClaimsDocsLogSearch" message="tns:ICDSupport_ClaimsDocsLogSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ClaimsDocsLogSearchResponse" message="tns:ICDSupport_ClaimsDocsLogSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateWCFServiceCall">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateWCFServiceCall" message="tns:ICDSupport_ValidateWCFServiceCall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateWCFServiceCallResponse" message="tns:ICDSupport_ValidateWCFServiceCall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateXMLOutputLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateXMLOutputLocation" message="tns:ICDSupport_ValidateXMLOutputLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateXMLOutputLocationResponse" message="tns:ICDSupport_ValidateXMLOutputLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateMessageQueue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateMessageQueue" message="tns:ICDSupport_ValidateMessageQueue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateMessageQueueResponse" message="tns:ICDSupport_ValidateMessageQueue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateClaimsDBConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateClaimsDBConnection" message="tns:ICDSupport_ValidateClaimsDBConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateClaimsDBConnectionResponse" message="tns:ICDSupport_ValidateClaimsDBConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateClaimsDocsDBConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateClaimsDocsDBConnection" message="tns:ICDSupport_ValidateClaimsDocsDBConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateClaimsDocsDBConnectionResponse" message="tns:ICDSupport_ValidateClaimsDocsDBConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCorrespondenceDBConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateCorrespondenceDBConnection" message="tns:ICDSupport_ValidateCorrespondenceDBConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateCorrespondenceDBConnectionResponse" message="tns:ICDSupport_ValidateCorrespondenceDBConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAMSDBConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateAMSDBConnection" message="tns:ICDSupport_ValidateAMSDBConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateAMSDBConnectionResponse" message="tns:ICDSupport_ValidateAMSDBConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateGenesisDBConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateGenesisDBConnection" message="tns:ICDSupport_ValidateGenesisDBConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateGenesisDBConnectionResponse" message="tns:ICDSupport_ValidateGenesisDBConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAMSPointToClaimsLinkedServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateAMSPointToClaimsLinkedServer" message="tns:ICDSupport_ValidateAMSPointToClaimsLinkedServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateAMSPointToClaimsLinkedServerResponse" message="tns:ICDSupport_ValidateAMSPointToClaimsLinkedServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAMSPointToGenesisLinkedServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateAMSPointToGenesisLinkedServer" message="tns:ICDSupport_ValidateAMSPointToGenesisLinkedServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateAMSPointToGenesisLinkedServerResponse" message="tns:ICDSupport_ValidateAMSPointToGenesisLinkedServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateClaimsPointToGenesisLinkedServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateClaimsPointToGenesisLinkedServer" message="tns:ICDSupport_ValidateClaimsPointToGenesisLinkedServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateClaimsPointToGenesisLinkedServerResponse" message="tns:ICDSupport_ValidateClaimsPointToGenesisLinkedServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressRegEx">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/ValidateAddressRegEx" message="tns:ICDSupport_ValidateAddressRegEx_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/ValidateAddressRegExResponse" message="tns:ICDSupport_ValidateAddressRegEx_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEMailMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDSupport/SendEMailMessage" message="tns:ICDSupport_SendEMailMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDSupport/SendEMailMessageResponse" message="tns:ICDSupport_SendEMailMessage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICDSupport" type="tns:ICDSupport">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ClaimsDocsLogCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ClaimsDocsLogCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClaimsDocsLogSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ClaimsDocsLogSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateWCFServiceCall">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateWCFServiceCall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateXMLOutputLocation">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateXMLOutputLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateMessageQueue">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateMessageQueue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateClaimsDBConnection">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateClaimsDBConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateClaimsDocsDBConnection">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateClaimsDocsDBConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateCorrespondenceDBConnection">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateCorrespondenceDBConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAMSDBConnection">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateAMSDBConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateGenesisDBConnection">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateGenesisDBConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAMSPointToClaimsLinkedServer">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateAMSPointToClaimsLinkedServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAMSPointToGenesisLinkedServer">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateAMSPointToGenesisLinkedServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateClaimsPointToGenesisLinkedServer">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateClaimsPointToGenesisLinkedServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAddressRegEx">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/ValidateAddressRegEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEMailMessage">
+      <soap:operation soapAction="http://tempuri.org/ICDSupport/SendEMailMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CDSupport">
+    <wsdl:port name="BasicHttpBinding_ICDSupport" binding="tns:BasicHttpBinding_ICDSupport">
+      <soap:address location="http://prodwss06a.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDSupport.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

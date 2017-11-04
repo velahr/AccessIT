@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+  <xs:element name="GroupCreate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objGroup" nillable="true" type="q1:Group" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupCreateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupCreateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupRead">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objGroup" nillable="true" type="q2:Group" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupReadResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="GroupReadResult" nillable="true" type="q3:Group" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objGroup" nillable="true" type="q4:Group" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupUpdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupUpdateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strSQLString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GroupSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="GroupSearchResult" nillable="true" type="q5:ArrayOfGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
