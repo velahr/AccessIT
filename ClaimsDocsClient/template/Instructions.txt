@@ -1,0 +1,44 @@
+﻿****** ClaimsDocs *******
+C:\Documents and Settings\kphifer\My Documents\LocalData\Projects\ClaimsDocsSolution\ClaimsDocsBizLogic\schema
+\\dev016dnet.accessgeneral.com\c$\Documents and Settings\kphifer\My Documents\LocalData\ProjectInfo\Claims\DataSamples\ClaimsDocsOuput\
+***** Command Line
+xsd.exe ClaimsDocs.xsd /c /n:ClaimsDocsBizLogic.SchemaClasses
+
+
+DEVXMLOutputLocation
+DEVCorrespondenceConnectionString
+DEVAMSDBConnectionString
+DEVClaimsDBConnectionString
+DEVClaimsDocsDBConnectionString
+
+
+ITQAXMLOutputLocation
+ITQACorrespondenceConnectionString : Data Source=ITQAPOLCLMSQL.ALPHA\POL01;Initial Catalog=Correspondence;User ID=website; password=
+ITQAAMSDBConnectionString : Data Source=aihitqasql2k5;Initial Catalog=AMS;User ID=website;password=
+ITQAClaimsDBConnectionString : Data Source=ITQAPOLCLMSQL.ALPHA\CLM01;Initial Catalog=Claims;User ID=website;password=
+ITQAClaimsDocsDBConnectionString : data source=DEVPOLCLMSQL.development;Integrated Security=True;initial catalog=ClaimsDocs
+
+---------------------------------------------------
+ClaimsDocsBizLogic.Settings List
+---------------------------------------------------
+ITQAAMSDBConnectionString
+ITQAClaimsDBConnectionString
+ITQAClaimsDocsDBConnectionString
+ITQACorrespondenceConnectionString
+
+ITQADocumakerEnvironment
+ITQADocumakerReplyQueue
+ITQADocumakerRequestQueue
+ITQADocumakerUNCRoot
+
+ITQAGenesisDBConnecionString
+
+ITQAImageRightLogin
+ITQAImageRightPassword
+
+ITQAImageRightWSURL
+
+ITQAXMLOutputLocation
+ITQAXMLUNCOutputLocation
+
+

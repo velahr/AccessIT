@@ -1,0 +1,234 @@
+/*
+COLORS: 
+	#5CA4D0
+	#003366
+	#336699
+	#989898
+	#666666
+*/
+/* sorted table */
+.hover td { background-color: #5CA4D0; }
+	
+BODY {
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+
+TABLE {
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+
+A, A:link, A:hover, A:active, A:visited {
+	color: #003366;
+	font-weight: bold;
+}
+
+DIV.siteHeader {
+	background-color: #5CA4D0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	border-color: #003366;
+}
+DIV.siteName {
+	font-family: Tahoma;
+	font-size: 20pt;
+}
+
+A.siteName, A.siteName:link, A.siteName:hover, A.siteName:active, A.siteName:visited {
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+
+DIV.copyright {
+	font-size: 8pt;
+	padding-top: 3px;
+	border-width: 1px 0px 0px 0px;
+	border-style: solid;
+	border-color: #989898;
+}
+
+TABLE.content {
+	color: #000000;
+	background-color: #dddddd;
+	width: 760px;
+	border-style: solid;
+	border-width: 1px;
+	/*border-color: #989898;*/
+	border-color: #003366;
+}
+
+TABLE.content2 {
+	color: #000000;
+	background-color: #ffffff;
+	width: 760px;
+	border-style: solid;
+	border-width: 1px;
+	/*border-color: #989898;*/
+	border-color: #003366;
+}
+
+
+TABLE.content TD.main {
+	padding: 1em;
+}
+
+TABLE.list {
+	color: #000000;
+	background-color: #dddddd;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #989898;
+}
+
+DIV.header {
+	padding: 1em 0em;
+}
+
+DIV.body {
+	padding: 1em 0em;
+}
+
+DIV.footer {
+	padding: 1em 0em;
+}
+
+DIV.nav {
+	color: #606060;
+	background-color: #dddddd;
+	width: 780px;
+    font-family: Tahoma;
+	font-size: 8pt;
+}
+
+A.nav, A.nav:link, A.nav:hover, A.nav:active, A.nav:visited {
+	color: #606060;
+    font-family: Tahoma;
+	font-size: 8pt;
+}
+
+SPAN.nav {
+	color: #606060;
+    font-family: Tahoma;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+TABLE.header {
+/*	background-color: #336699;
+	color: #ffffff;*/
+}
+TABLE.header TD.name {
+	width: 17%;
+	font-weight: bold;
+	vertical-align: top;
+}
+TABLE.header TD.value {
+	width: 33%;
+	vertical-align: top;
+}
+
+TABLE.distribution {
+}
+TABLE.distribution TD.name {
+	width: 25%;
+	font-weight: bold;
+	vertical-align: top;
+}
+TABLE.distribution TD.value {
+	width: 25%;
+	vertical-align: top;
+}
+
+TR.header {
+/*	color: #ffffff;
+	background-color: #003366;*/
+}
+TR.header TH {
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	border-color: #989898;
+}
+
+TR.repeating1 {
+	background-color: #FFFFFF;
+}
+TR.repeating2 {
+	background-color: #D6E9F3;
+}
+
+TR.overdue {
+	color: red;
+	font-weight: bold;
+}
+
+FORM {
+	padding: 0px;
+	margin: 0px;
+}
+
+SELECT {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #989898;
+}
+
+INPUT.button {
+	color: #FFFFFF;
+	background-color: #003366;
+	border-color: #000000;
+	width: 6em;
+}
+
+INPUT.flat, TEXTAREA.flat {
+	padding-left: 2px;
+	padding-right: 2px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #989898;
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+
+INPUT.NUMBER, INPUT.DATE {
+	width: 8em;
+	padding-left: 2px;
+	padding-right: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #989898;
+}
+INPUT.STRING, INPUT.TEXT, TEXTAREA.TEXT {
+	width: 100%;
+	padding-left: 2px;
+	padding-right: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #989898;
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+
+SPAN.required {
+}
+
+SPAN.required INPUT, SPAN.required TEXTAREA {
+	background-color: #ffffdd;
+}
+	
+PRE.field {
+	padding: 0px;
+	margin: 0px;
+	font-family: Tahoma;
+	font-size: 10pt;
+}
+
+LABEL.distribution {
+	font-weight: bold;
+}
+
+/*bolds the fieldset legend on the main page*/
+LEGEND.title{
+	font-weight: bold
+}

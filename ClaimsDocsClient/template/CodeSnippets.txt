@@ -1,0 +1,32 @@
+﻿ protected void MethodNameHere()
+        {
+            //declare variables
+
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                            //handle error
+                ClaimsDocsLog objClaimsLog = new ClaimsDocsLog();
+                AppSupport objSupport = new AppSupport();
+                //fill log
+                objClaimsLog.ClaimsDocsLogID = 0;
+                objClaimsLog.LogTypeID = 3;
+                objClaimsLog.LogSourceTypeID = 2;
+                objClaimsLog.MessageIs = "Method : MethodNameHere ";
+                objClaimsLog.ExceptionIs = ex.Message;
+                objClaimsLog.StackTraceIs = ex.StackTrace;
+                objClaimsLog.IUDateTime = DateTime.Now;
+                //create log record
+                objSupport.ClaimsDocsLogCreate(objClaimsLog, AppConfig.CorrespondenceDBConnectionString);
+
+                //cleanup
+                objClaimsLog = null;
+                objSupport = null;
+            }
+            finally
+            {
+
+            }
+        }//end : cmdRunValidation_Click

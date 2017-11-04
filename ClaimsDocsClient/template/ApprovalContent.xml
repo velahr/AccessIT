@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document>
+	<definition>
+		<active>true</active>
+		<copy-to-agent>false</copy-to-agent>
+		<copy-to-attorney>false</copy-to-attorney>
+		<copy-to-finance-company>false</copy-to-finance-company>
+		<copy-to-insured>true</copy-to-insured>
+		<copy-to-lien-holder>false</copy-to-lien-holder>
+		<department>
+			<id>1</id>
+		</department>
+		<description>Denial - Liability - MD</description>
+		<designer>
+			<id>9</id>
+		</designer>
+		<effective-date>2006-06-07 00:00:00</effective-date>
+		<field-definitions>
+			<field-definition>
+				<id>29</id>
+				<name>Reason</name>
+				<type>TEXT</type>
+				<description>Reason for Denial</description>
+				<required>true</required>
+			</field-definition>
+			<field-definition>
+				<id>30</id>
+				<name>Amount</name>
+				<type>NUMBER</type>
+				<description>Claim Amount</description>
+				<required>true</required>
+			</field-definition>
+		</field-definitions>
+		<id>1</id>
+		<imageright-document-id>CLMS</imageright-document-id>
+		<imageright-document-section>MD</imageright-document-section>
+		<imageright-drawer>CORM</imageright-drawer>
+		<import-to-datamatx>false</import-to-datamatx>
+		<import-to-imageright>false</import-to-imageright>
+		<last-modified>2006-06-08 10:12:29</last-modified>
+		<name>ACADEN01</name>
+		<program>
+			<id>1</id>
+		</program>
+		<proof-of-mailing>false</proof-of-mailing>
+		<review-required>true</review-required>
+		<stylesheet-name>ACADEN01.01.xsl</stylesheet-name>
+		<template-name>Templates/AG_AdhocCorrespondence.tem</template-name>
+		<attached-document />
+		<diary-auto-update>false</diary-auto-update>
+	</definition>
+	<fields>
+		<field>
+			<definition>
+				<id>29</id>
+				<name>Reason</name>
+				<type>TEXT</type>
+				<description>Reason for Denial</description>
+				<required>true</required>
+			</definition>
+			<value>sadfdsafas</value>
+		</field>
+		<field>
+			<definition>
+				<id>30</id>
+				<name>Amount</name>
+				<type>NUMBER</type>
+				<description>Claim Amount</description>
+				<required>true</required>
+			</definition>
+			<value>$1,000.00</value>
+		</field>
+	</fields>
+	<id>5EFF4100-11D8-1DB1-8068-BF6464CCAA77</id>
+	<input>
+		<meta-data>
+			<addresses>
+				<address type="addressee">
+					<email />
+					<fax />
+					<name>LORENA PARADA</name>
+					<phone />
+					<lines>
+						<line>8337 Rosemead Blvd # 2</line>
+						<line />
+						<line>Pico Rivera, CA 90660</line>
+					</lines>
+				</address>
+				<address type="producer">
+					<email />
+					<fax />
+					<name>IRMA ALICIA SANTOS INSURANCE</name>
+					<phone>(323)264-929</phone>
+					<lines>
+						<line>2001 1ST STREET</line>
+						<line />
+						<line>LOS ANGELES, CA 90033</line>
+					</lines>
+				</address>
+				<address type="lien-holder">
+					<email />
+					<fax />
+					<name />
+					<phone />
+					<lines>
+						<line />
+						<line />
+						<line>VAN NUYS, CA 91407</line>
+					</lines>
+				</address>
+				<address type="adjuster">
+					<email>lmelvin@accessgeneral.com</email>
+					<fax />
+					<name>Lakisha Melvin</name>
+					<phone>6618</phone>
+					<lines>
+						<line />
+						<line />
+						<line />
+					</lines>
+				</address>
+				<address type="insured">
+					<email />
+					<fax />
+					<name>Freddie Huguez</name>
+					<phone>(323) 264-5874</phone>
+					<lines>
+						<line>639 N San Benito St</line>
+						<line />
+						<line>Los Angeles, CA 90033</line>
+					</lines>
+				</address>
+			</addresses>
+			<department>CLAIMS</department>
+			<display-fields>
+				<display-field>
+					<name>User:</name>
+					<value>whtest</value>
+				</display-field>
+				<display-field>
+					<name>Mode:</name>
+					<value>TEST</value>
+				</display-field>
+				<display-field>
+					<name>Department:</name>
+					<value>CLAIMS</value>
+				</display-field>
+				<display-field>
+					<name>Claim #:</name>
+					<value>C00128653A</value>
+				</display-field>
+				<display-field>
+					<name>Program Code:</name>
+					<value>ACA</value>
+				</display-field>
+				<display-field>
+					<name>Addressee:</name>
+					<value>LORENA PARADA</value>
+				</display-field>
+			</display-fields>
+			<policy>
+				<number>LGC000257044</number>
+			</policy>
+			<program>ACA</program>
+			<user>whtest</user>
+		</meta-data>
+		<document>
+			<Claims>
+				<Department>CLAIMS</Department>
+				<ClaimsUser>whtest</ClaimsUser>
+				<ProgramCode>ACA</ProgramCode>
+				<ClaimNumber>C00128653A</ClaimNumber>
+				<ClaimDateOfLoss>12/31/2004</ClaimDateOfLoss>
+				<ClaimReportDate>01/03/2005</ClaimReportDate>
+				<PolicyNumber>LGC000257044</PolicyNumber>
+				<PolicyTerm>6 Month</PolicyTerm>
+				<PolicyEffectiveDate>11/16/2004</PolicyEffectiveDate>
+				<PolicyLastExpirationDate>05/16/2005</PolicyLastExpirationDate>
+				<PolicyCancellationDate>04/17/2005</PolicyCancellationDate>
+				<PolicyLastEndorsementDate>01/01/1900</PolicyLastEndorsementDate>
+				<PolicyStatus>CANCEL</PolicyStatus>
+				<Mode>TEST</Mode>
+				<AddresseeName>LORENA  PARADA</AddresseeName>
+				<AddresseeAddressLine1>8337 Rosemead Blvd # 2</AddresseeAddressLine1>
+				<AddresseeAddressLine2 />
+				<AddresseeAddressLine3>Pico Rivera, CA 90660</AddresseeAddressLine3>
+				<AddresseePhoneNumber />
+				<AddresseeFaxNumber />
+				<AddresseeEmailAddress />
+				<Producer>
+					<ProducerState>CA</ProducerState>
+					<ProducerCode>CA231700</ProducerCode>
+					<ProducerZip>90033</ProducerZip>
+					<ProducerName>IRMA ALICIA SANTOS INSURANCE</ProducerName>
+					<ProducerPhoneNumber>(323)264-929</ProducerPhoneNumber>
+					<ProducerFaxNumber />
+					<ProducerEmailAddress />
+					<ProducerAddressLine1>2001 1ST STREET</ProducerAddressLine1>
+					<ProducerAddressLine2 />
+					<ProducerAddressLine3>LOS ANGELES, CA 90033</ProducerAddressLine3>
+					<LeinHolder>
+						<LeinHolderName>CREDINTIAL ACCEPTANCE         </LeinHolderName>
+						<LeinHolderAddress1>PO BOX 3066</LeinHolderAddress1>
+						<LeinHolderAddressLine2 />
+						<LeinHolderAddressLine3>VAN NUYS, CA 91407</LeinHolderAddressLine3>
+						<LeinHolderPhoneNumber />
+						<LeinHolderFaxNumber />
+						<LeinHolderEmailAddress />
+						<Adjuster>
+							<AdjusterPhoneNumber>6618           </AdjusterPhoneNumber>
+							<AdjusterFirstName>Lakisha</AdjusterFirstName>
+							<AdjusterLastName>Melvin</AdjusterLastName>
+							<AdjusterMiddleInitial />
+							<AdjusterEmailAddress>lmelvin@accessgeneral.com</AdjusterEmailAddress>
+							<AdjusterFaxNumber />
+							<NamedInsured>
+								<NamedInsuredFirstName>Freddie        </NamedInsuredFirstName>
+								<NamedInsuredMiddleInitial />
+								<NamedInsuredLastName>Huguez</NamedInsuredLastName>
+								<NamedInsuredAddressLine1>639 N San Benito St</NamedInsuredAddressLine1>
+								<NamedInsuredAddressLine2 />
+								<NamedInsuredAddressLine3>Los Angeles, CA 90033</NamedInsuredAddressLine3>
+								<NamedInsuredPhoneNumber>(323) 264-5874</NamedInsuredPhoneNumber>
+								<NamedInsuredFaxNumber />
+								<NamedInsuredEmailAddress />
+								<Vehicle>
+									<VehicleSerialNumber>1GKEC13V0YJ180293   </VehicleSerialNumber>
+									<VehicleYear>2000</VehicleYear>
+									<VehicleMake>GMC</VehicleMake>
+									<VehicleModel>YUKON</VehicleModel>
+									<VehiclePlateNumber />
+									<LossDescription>
+										<LossDescriptionStreetAddress>8337 Rosemead Blvd # 2</LossDescriptionStreetAddress>
+										<LossDescriptionLocation />
+										<LossDescriptionCity>Pico Rivera</LossDescriptionCity>
+										<LossDescriptionState>CA</LossDescriptionState>
+									</LossDescription>
+								</Vehicle>
+							</NamedInsured>
+						</Adjuster>
+					</LeinHolder>
+				</Producer>
+			</Claims>
+		</document>
+	</input>
+	<submitter>
+		<approver>true</approver>
+		<department>
+			<id>1</id>
+			<name>CLAIMS</name>
+		</department>
+		<designer>true</designer>
+		<groups>
+			<group>
+				<id>1</id>
+				<name>MD</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>2</id>
+				<name>BI</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>3</id>
+				<name>LIT</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>4</id>
+				<name>SIU</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>5</id>
+				<name>SAL</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>6</id>
+				<name>SUBRO</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>8</id>
+				<name>System</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>9</id>
+				<name>UASPECIAL</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>10</id>
+				<name>CSR</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>11</id>
+				<name>US</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>12</id>
+				<name>PSS</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>13</id>
+				<name>QA</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+			<group>
+				<id>14</id>
+				<name>PSS2</name>
+				<department>
+					<id>1</id>
+					<name>CLAIMS</name>
+				</department>
+			</group>
+		</groups>
+		<id>8</id>
+		<name>whtest</name>
+		<phone>506-855-0005</phone>
+		<review-required>false</review-required>
+		<signature />
+		<signature-name>WH Test Account - Sig Name</signature-name>
+		<email>whtest@whitehilltech.com</email>
+		<title>WH Test Account - Title</title>
+		<active>true</active>
+	</submitter>
+</document>

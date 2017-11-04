@@ -1,0 +1,33 @@
+﻿/****************** LOCAL DEPLOYMENT ****************/
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/CDDepartments/mex
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/CDDocument/mex
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/CDDocumentField/mex
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/CDGroups/mex
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/CDProgram/mex
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/CDSupport/mex
+http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/CDUsers/mex
+
+/****************** DEVELOPMENT DEPLOYMENT ****************/
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.ClaimsDocsGenerator.svc
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDepartments.svc
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDGroups.svc
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDProgram.svc
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDSupport.svc
+http://devweb02.development.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDUsers.svc
+
+
+/****************** ITQA DEPLOYMENT ****************/
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.ClaimsDocsGenerator.svc
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDepartments.svc
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDGroups.svc
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDProgram.svc
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDSupport.svc
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDUsers.svc
+
+/***************** ITQA DEPLOYMENT BASE ADDRESS ********/
+http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/
