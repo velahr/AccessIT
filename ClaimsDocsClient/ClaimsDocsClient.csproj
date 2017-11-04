@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{50B2BB66-6ACA-4777-AC91-F7BC13DD6DFC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClaimsDocsClient</RootNamespace>
+    <AssemblyName>ClaimsDocsClient</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClaimsDocsLogViewer.aspx" />
+    <Content Include="correspondence\CorrespondenceDocumentConfirm.aspx" />
+    <Content Include="correspondence\CorrespondenceDocumentEntry.aspx" />
+    <Content Include="correspondence\CorrespondenceDocumentList.aspx" />
+    <Content Include="correspondence\CorrespondenceDocumentReview.aspx" />
+    <Content Include="images\accessimage.bmp" />
+    <Content Include="images\AccessNewLogo.JPG" />
+    <Content Include="images\logo_small.jpg" />
+    <Content Include="secure\AdminDocs.aspx" />
+    <Content Include="secure\Administration.aspx" />
+    <Content Include="secure\AdminNonDocs.aspx" />
+    <Content Include="secure\DepartmentAdmin.aspx" />
+    <Content Include="secure\DepartmentList.aspx" />
+    <Content Include="secure\DocDefDocDefAdmin.aspx" />
+    <Content Include="secure\DocDefDocList.aspx" />
+    <Content Include="secure\GroupAdmin.aspx" />
+    <Content Include="secure\GroupList.aspx" />
+    <Content Include="secure\ProgramAdmin.aspx" />
+    <Content Include="secure\ProgramList.aspx" />
+    <Content Include="secure\UserAdmin.aspx" />
+    <Content Include="secure\UserList.aspx" />
+    <None Include="Service References\configuration91.svcinfo" />
+    <Content Include="styles\accessgeneral.css" />
+    <Content Include="ClaimsDocsLogin.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="template\ApprovalContent.xml" />
+    <Content Include="template\Instructions.txt" />
+    <Content Include="template\template_basicpage.aspx" />
+    <Content Include="template\template_listpage.aspx" />
+    <Content Include="template\template_standardpage.aspx" />
+    <Content Include="TestHarness\ClaimsDocsTestPage.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppClasses\AppConfig.cs" />
+    <Compile Include="AppClasses\AppSupport.cs" />
+    <Compile Include="ClaimsDocsLogViewer.aspx.cs">
+      <DependentUpon>ClaimsDocsLogViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimsDocsLogViewer.aspx.designer.cs">
+      <DependentUpon>ClaimsDocsLogViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimsDocsUserGuide.aspx.cs">
+      <DependentUpon>ClaimsDocsUserGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimsDocsUserGuide.aspx.designer.cs">
+      <DependentUpon>ClaimsDocsUserGuide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentConfirm.aspx.cs">
+      <DependentUpon>CorrespondenceDocumentConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentConfirm.aspx.designer.cs">
+      <DependentUpon>CorrespondenceDocumentConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentEntry.aspx.cs">
+      <DependentUpon>CorrespondenceDocumentEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentEntry.aspx.designer.cs">
+      <DependentUpon>CorrespondenceDocumentEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentList.aspx.cs">
+      <DependentUpon>CorrespondenceDocumentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentList.aspx.designer.cs">
+      <DependentUpon>CorrespondenceDocumentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentReview.aspx.cs">
+      <DependentUpon>CorrespondenceDocumentReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceDocumentReview.aspx.designer.cs">
+      <DependentUpon>CorrespondenceDocumentReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceUserGroup.aspx.cs">
+      <DependentUpon>CorrespondenceUserGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="correspondence\CorrespondenceUserGroup.aspx.designer.cs">
+      <DependentUpon>CorrespondenceUserGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\AdminDocs.aspx.cs">
+      <DependentUpon>AdminDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\AdminDocs.aspx.designer.cs">
+      <DependentUpon>AdminDocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\Administration.aspx.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\Administration.aspx.designer.cs">
+      <DependentUpon>Administration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClaimsDocsLogin.aspx.cs">
+      <DependentUpon>ClaimsDocsLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClaimsDocsLogin.aspx.designer.cs">
+      <DependentUpon>ClaimsDocsLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="secure\AdminNonDocs.aspx.cs">
+      <DependentUpon>AdminNonDocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\AdminNonDocs.aspx.designer.cs">
+      <DependentUpon>AdminNonDocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\ApprovalDocDecline.aspx.cs">
+      <DependentUpon>ApprovalDocDecline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\ApprovalDocDecline.aspx.designer.cs">
+      <DependentUpon>ApprovalDocDecline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\ApprovalDocList.aspx.cs">
+      <DependentUpon>ApprovalDocList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\ApprovalDocList.aspx.designer.cs">
+      <DependentUpon>ApprovalDocList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\ApprovalDocReview.aspx.cs">
+      <DependentUpon>ApprovalDocReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\ApprovalDocReview.aspx.designer.cs">
+      <DependentUpon>ApprovalDocReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\Confirmation.aspx.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\Confirmation.aspx.designer.cs">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\DepartmentAdmin.aspx.cs">
+      <DependentUpon>DepartmentAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\DepartmentAdmin.aspx.designer.cs">
+      <DependentUpon>DepartmentAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\DepartmentList.aspx.cs">
+      <DependentUpon>DepartmentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\DepartmentList.aspx.designer.cs">
+      <DependentUpon>DepartmentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\DocDefDocDefAdmin.aspx.cs">
+      <DependentUpon>DocDefDocDefAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\DocDefDocDefAdmin.aspx.designer.cs">
+      <DependentUpon>DocDefDocDefAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\DocDefDocList.aspx.cs">
+      <DependentUpon>DocDefDocList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\DocDefDocList.aspx.designer.cs">
+      <DependentUpon>DocDefDocList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\GroupAdmin.aspx.cs">
+      <DependentUpon>GroupAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\GroupAdmin.aspx.designer.cs">
+      <DependentUpon>GroupAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\GroupList.aspx.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\GroupList.aspx.designer.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\ProgramAdmin.aspx.cs">
+      <DependentUpon>ProgramAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\ProgramAdmin.aspx.designer.cs">
+      <DependentUpon>ProgramAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\ProgramList.aspx.cs">
+      <DependentUpon>ProgramList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\ProgramList.aspx.designer.cs">
+      <DependentUpon>ProgramList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\UserAdmin.aspx.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\UserAdmin.aspx.designer.cs">
+      <DependentUpon>UserAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="secure\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="secure\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxClaimsDocGenerator\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxyCDDepartment\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxyCDDocument2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxyCDDocumentField\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxyCDGroup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxyCDProgram\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxyCDSupport\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\proxyCDUser\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="template\template_basicpage.aspx.cs">
+      <DependentUpon>template_basicpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\template_basicpage.aspx.designer.cs">
+      <DependentUpon>template_basicpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\template_listpage.aspx.cs">
+      <DependentUpon>template_listpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\template_listpage.aspx.designer.cs">
+      <DependentUpon>template_listpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="template\template_standardpage.aspx.cs">
+      <DependentUpon>template_standardpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="template\template_standardpage.aspx.designer.cs">
+      <DependentUpon>template_standardpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestHarness\ClaimsDocsBizLogicTestPage.aspx.cs">
+      <DependentUpon>ClaimsDocsBizLogicTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestHarness\ClaimsDocsBizLogicTestPage.aspx.designer.cs">
+      <DependentUpon>ClaimsDocsBizLogicTestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestHarness\ClaimsDocsImageRight.aspx.cs">
+      <DependentUpon>ClaimsDocsImageRight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestHarness\ClaimsDocsImageRight.aspx.designer.cs">
+      <DependentUpon>ClaimsDocsImageRight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestHarness\ClaimsDocsTestPage.aspx.cs">
+      <DependentUpon>ClaimsDocsTestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestHarness\ClaimsDocsTestPage.aspx.designer.cs">
+      <DependentUpon>ClaimsDocsTestPage.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClaimsDocsUserGuide.aspx" />
+    <Content Include="correspondence\CorrespondenceUserGroup.aspx" />
+    <Content Include="images\C4ClaimsSearch.JPG" />
+    <Content Include="images\C4ContactSearch.JPG" />
+    <Content Include="images\CDCorrespondenceUserGroup.JPG" />
+    <Content Include="images\ClaimsDocsFunctionalProcess.jpg" />
+    <Content Include="images\ClaimsServerLayout.jpg" />
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsBizLogic.SchemaClasses.xsd" />
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsBizLogic.xsd" />
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentAddressee.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentAllCoveragesCar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentCompanyInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillAdjuster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillAttorney.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillCoverages.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillLienHolder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillLossDescription.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillNamedInsured.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillPolicyClaimInformation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillPremiumFinanceCo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillProducer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ClaimsDocumentInputDocumentWhitehillVehicle.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.DocGenerationRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.DocGenerationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.ImageRightClaimRequest.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\ClaimsDocsClient.proxClaimsDocGenerator.VehicleData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\configuration91.svcinfo" />
+    <None Include="Service References\proxClaimsDocGenerator\configuration.svcinfo" />
+    <None Include="Service References\proxClaimsDocGenerator\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxClaimsDocGenerator\service.wsdl" />
+    <None Include="Service References\proxClaimsDocGenerator\service.xsd" />
+    <None Include="Service References\proxClaimsDocGenerator\service1.xsd" />
+    <None Include="Service References\proxyCDDepartment\ClaimsDocsBizLogic.xsd" />
+    <None Include="Service References\proxyCDDepartment\ClaimsDocsClient.proxyCDDepartment.Department.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDepartment\configuration91.svcinfo" />
+    <None Include="Service References\proxyCDDepartment\configuration.svcinfo" />
+    <None Include="Service References\proxyCDDepartment\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxyCDDepartment\service.wsdl" />
+    <None Include="Service References\proxyCDDepartment\service.xsd" />
+    <None Include="Service References\proxyCDDepartment\service1.xsd" />
+    <None Include="Service References\proxyCDDocument2\ClaimsDocsBizLogic1.xsd" />
+    <None Include="Service References\proxyCDDocument2\ClaimsDocsClient.proxyCDDocument2.Document.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocument2\ClaimsDocsClient.proxyCDDocument2.DocumentApprovalQueue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocument2\ClaimsDocsClient.proxyCDDocument2.DocumentField.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocument2\ClaimsDocsClient.proxyCDDocument2.DocumentGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocument2\ClaimsDocsClient.proxyCDDocument2.DocumentLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocument2\ClaimsDocsClient.proxyCDDocument2.DocumentsNeedingApproval.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocument2\service1.wsdl" />
+    <None Include="Service References\proxyCDDocument2\service2.xsd" />
+    <None Include="Service References\proxyCDDocument2\service21.xsd" />
+    <None Include="Service References\proxyCDDocumentField\ClaimsDocsBizLogic.SchemaClasses1.xsd" />
+    <None Include="Service References\proxyCDDocumentField\ClaimsDocsBizLogic.xsd" />
+    <None Include="Service References\proxyCDDocumentField\ClaimsDocsClient.proxyCDDocumentField.DocumentDisplayField.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocumentField\ClaimsDocsClient.proxyCDDocumentField.DocumentField.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDDocumentField\configuration91.svcinfo" />
+    <None Include="Service References\proxyCDDocumentField\configuration.svcinfo" />
+    <None Include="Service References\proxyCDDocumentField\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxyCDDocumentField\service.wsdl" />
+    <None Include="Service References\proxyCDDocumentField\service.xsd" />
+    <None Include="Service References\proxyCDDocumentField\service1.xsd" />
+    <None Include="Service References\proxyCDGroup\ClaimsDocsBizLogic.xsd" />
+    <None Include="Service References\proxyCDGroup\ClaimsDocsClient.proxyCDGroup.Group.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDGroup\configuration91.svcinfo" />
+    <None Include="Service References\proxyCDGroup\configuration.svcinfo" />
+    <None Include="Service References\proxyCDGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxyCDGroup\service.wsdl" />
+    <None Include="Service References\proxyCDGroup\service.xsd" />
+    <None Include="Service References\proxyCDGroup\service1.xsd" />
+    <None Include="Service References\proxyCDProgram\ClaimsDocsBizLogic.xsd" />
+    <None Include="Service References\proxyCDProgram\ClaimsDocsClient.proxyCDProgram.Program.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDProgram\configuration91.svcinfo" />
+    <None Include="Service References\proxyCDProgram\configuration.svcinfo" />
+    <None Include="Service References\proxyCDProgram\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxyCDProgram\service.wsdl" />
+    <None Include="Service References\proxyCDProgram\service.xsd" />
+    <None Include="Service References\proxyCDProgram\service1.xsd" />
+    <None Include="Service References\proxyCDSupport\ClaimsDocsBizLogic.xsd" />
+    <None Include="Service References\proxyCDSupport\ClaimsDocsClient.proxyCDSupport.ClaimsDocsLog.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDSupport\ClaimsDocsClient.proxyCDSupport.ValidateResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDSupport\configuration91.svcinfo" />
+    <None Include="Service References\proxyCDSupport\configuration.svcinfo" />
+    <None Include="Service References\proxyCDSupport\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxyCDSupport\service.wsdl" />
+    <None Include="Service References\proxyCDSupport\service.xsd" />
+    <None Include="Service References\proxyCDSupport\service1.xsd" />
+    <None Include="Service References\proxyCDUser\ClaimsDocsBizLogic.xsd" />
+    <None Include="Service References\proxyCDUser\ClaimsDocsClient.proxyCDUser.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDUser\ClaimsDocsClient.proxyCDUser.UserGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\proxyCDUser\configuration91.svcinfo" />
+    <None Include="Service References\proxyCDUser\configuration.svcinfo" />
+    <None Include="Service References\proxyCDUser\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxyCDDocument2\configuration91.svcinfo" />
+    <None Include="Service References\proxyCDDocument2\configuration.svcinfo" />
+    <None Include="Service References\proxyCDDocument2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\proxyCDUser\service.wsdl" />
+    <None Include="Service References\proxyCDUser\service.xsd" />
+    <None Include="Service References\proxyCDUser\service1.xsd" />
+    <Content Include="template\CodeSnippets.txt" />
+    <Content Include="template\deployment\ClaimsDocsClient_ITQA.config" />
+    <Content Include="template\deployment\ClaimsDocsClient_Development.config" />
+    <Content Include="template\deployment\ClaimsDocsBizLogic_Development.config" />
+    <Content Include="secure\ApprovalDocDecline.aspx" />
+    <Content Include="secure\ApprovalDocList.aspx" />
+    <Content Include="secure\ApprovalDocReview.aspx" />
+    <Content Include="secure\Confirmation.aspx" />
+    <Content Include="template\DEVMACHINE_WEBCONFIG.txt" />
+    <Content Include="template\WCFReferences.txt" />
+    <Content Include="TestHarness\ClaimsDocsBizLogicTestPage.aspx" />
+    <Content Include="TestHarness\ClaimsDocsImageRight.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\proxClaimsDocGenerator\" />
+    <WCFMetadataStorage Include="Service References\proxyCDDepartment\" />
+    <WCFMetadataStorage Include="Service References\proxyCDDocument2\" />
+    <WCFMetadataStorage Include="Service References\proxyCDDocumentField\" />
+    <WCFMetadataStorage Include="Service References\proxyCDGroup\" />
+    <WCFMetadataStorage Include="Service References\proxyCDProgram\" />
+    <WCFMetadataStorage Include="Service References\proxyCDSupport\" />
+    <WCFMetadataStorage Include="Service References\proxyCDUser\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Service References\proxyCDDocument2\App_LocalResources\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2090</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/ClaimsDocsClient</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
