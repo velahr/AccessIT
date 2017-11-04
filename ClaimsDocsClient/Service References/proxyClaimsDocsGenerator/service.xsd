@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+  <xs:element name="ClaimsDocsGenerateXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q1:DocGenerationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClaimsDocsGenerateXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClaimsDocsGenerateXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PolicyInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q2:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PolicyInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="PolicyInformationGetResult" nillable="true" type="q3:PolicyInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddresseeInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q4:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strAMSDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddresseeInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="AddresseeInformationGetResult" nillable="true" type="q5:AddresseeInformation" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CoverageInformationGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="objDocumentGenerationRequest" nillable="true" type="q6:DocGenerationRequest" />
+        <xs:element minOccurs="0" name="strClaimsDBConnectionString" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CoverageInformationGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" minOccurs="0" name="CoverageInformationGetResult" nillable="true" type="q7:Coverage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

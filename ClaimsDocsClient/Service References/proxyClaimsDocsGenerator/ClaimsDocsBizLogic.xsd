@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DocGenerationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaimNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactType" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="InstanceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocGenerationRequest" nillable="true" type="tns:DocGenerationRequest" />
+  <xs:complexType name="PolicyInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaimNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Department" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyCancellationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyEffectiveDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyLastEndorsementDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyLastExpirationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PolicyNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyTerm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PolicyInformation" nillable="true" type="tns:PolicyInformation" />
+  <xs:complexType name="AddresseeInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EMail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddresseeInformation" nillable="true" type="tns:AddresseeInformation" />
+  <xs:complexType name="Coverage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccidentalDeath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ArbitrationAgreementWaiver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AutoClub" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BillingServiceCharges" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BodilyInjury" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrokersFee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CIGA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Collision" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CollissionDeductibleWaiver" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CombinedFPB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CombinedSingleLimits" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comprehensive" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpenseConstant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtraMedical" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FilingFee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Funeral" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IncomeLoss" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Medical" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PersonalFamilyProtection" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyFee" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyDamage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RentalReimbursement" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialEquipment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Towing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnInsuredMotoristStacked" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnInsuredMotoristUnStacked" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnderInsuredMotoristStacked" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnderInsuredMotoristUnStacked" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UninsuredMotoristBI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UninsuredMotoristPD" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Coverage" nillable="true" type="tns:Coverage" />
+</xs:schema>

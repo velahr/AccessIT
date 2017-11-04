@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="CDUsers" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICDUsers_UserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserRead" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserReadByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserReadByUserName" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserReadByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserReadByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupSearchByUserName_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupSearchByUserName" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupSearchByUserName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupSearchByUserNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupClear_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupClear" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupClear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDUsers_UserGroupCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserGroupCreateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICDUsers">
+    <wsdl:operation name="UserLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserLogin" message="tns:ICDUsers_UserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserLoginResponse" message="tns:ICDUsers_UserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserCreate" message="tns:ICDUsers_UserCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserCreateResponse" message="tns:ICDUsers_UserCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserRead" message="tns:ICDUsers_UserRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserReadResponse" message="tns:ICDUsers_UserRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserReadByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserReadByUserName" message="tns:ICDUsers_UserReadByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserReadByUserNameResponse" message="tns:ICDUsers_UserReadByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserUpdate" message="tns:ICDUsers_UserUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserUpdateResponse" message="tns:ICDUsers_UserUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserSearch" message="tns:ICDUsers_UserSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserSearchResponse" message="tns:ICDUsers_UserSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserGroupSearch" message="tns:ICDUsers_UserGroupSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserGroupSearchResponse" message="tns:ICDUsers_UserGroupSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupSearchByUserName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserGroupSearchByUserName" message="tns:ICDUsers_UserGroupSearchByUserName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserGroupSearchByUserNameResponse" message="tns:ICDUsers_UserGroupSearchByUserName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupClear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserGroupClear" message="tns:ICDUsers_UserGroupClear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserGroupClearResponse" message="tns:ICDUsers_UserGroupClear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDUsers/UserGroupCreate" message="tns:ICDUsers_UserGroupCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDUsers/UserGroupCreateResponse" message="tns:ICDUsers_UserGroupCreate_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICDUsers" type="tns:ICDUsers">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UserLogin">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserRead">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserReadByUserName">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserReadByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserUpdate">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserGroupSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupSearchByUserName">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserGroupSearchByUserName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupClear">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserGroupClear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGroupCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDUsers/UserGroupCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CDUsers">
+    <wsdl:port name="BasicHttpBinding_ICDUsers" binding="tns:BasicHttpBinding_ICDUsers">
+      <soap:address location="http://testwss06a.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDUsers.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

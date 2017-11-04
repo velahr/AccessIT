@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e3bc1383-c75e-485c-a392-67e563e33a95" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="4f9cf3bb-de84-4f15-ad85-3572b566ad2f" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="287bd690-10b6-4f17-9663-291fd8823cf7" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="e5febfce-337d-4bc0-a52f-9eece02ffbac" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+    <MetadataFile FileName="ClaimsDocsBizLogic.xsd" MetadataType="Schema" ID="6763af35-ec2e-4abc-b61f-fe8102e3e186" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
