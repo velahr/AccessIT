@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Document">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Active" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AdditionalDataRequired" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttachedDocument" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactNo" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactType" type="xs:int" />
+      <xs:element minOccurs="0" name="CopyAgent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CopyAttorney" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CopyFinanceCo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CopyInsured" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CopyLienHolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataMatx" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DepartmentID" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DesignerID" type="xs:int" />
+      <xs:element minOccurs="0" name="DiaryAutoUpdate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiaryNumberOfDays" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="EffectiveDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IUDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ImageRightDocumentID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightDocumentSection" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageRightDrawer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImportToImageRight" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ProgramCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgramID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProofOfMailing" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Review" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StyleSheetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lisDocumentField" nillable="true" type="tns:ArrayOfDocumentField" />
+      <xs:element minOccurs="0" name="listDocumentGroup" nillable="true" type="tns:ArrayOfDocumentGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Document" nillable="true" type="tns:Document" />
+  <xs:complexType name="ArrayOfDocumentField">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentField" nillable="true" type="tns:DocumentField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentField" nillable="true" type="tns:ArrayOfDocumentField" />
+  <xs:complexType name="DocumentField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentFieldID" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="FieldDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldNameIs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldTypeIs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IUDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IsFieldRequired" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentField" nillable="true" type="tns:DocumentField" />
+  <xs:complexType name="ArrayOfDocumentGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentGroup" nillable="true" type="tns:DocumentGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentGroup" nillable="true" type="tns:ArrayOfDocumentGroup" />
+  <xs:complexType name="DocumentGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="IUDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentGroup" nillable="true" type="tns:DocumentGroup" />
+  <xs:complexType name="ArrayOfDocument">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Document" nillable="true" type="tns:Document" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocument" nillable="true" type="tns:ArrayOfDocument" />
+  <xs:complexType name="DocumentLog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalRequired" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApproverID" type="xs:int" />
+      <xs:element minOccurs="0" name="ClaimNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateApproved" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateDeclined" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateGenerated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateSubmitted" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeclinerID" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="GeneratedErrorCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IUDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstanceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReasonDeclined" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubmitterID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentLog" nillable="true" type="tns:DocumentLog" />
+  <xs:complexType name="DocumentApprovalQueue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalQueueID" type="xs:int" />
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateSubmitted" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="IUDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstanceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubmitterID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentApprovalQueue" nillable="true" type="tns:DocumentApprovalQueue" />
+  <xs:complexType name="ArrayOfDocumentApprovalQueue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentApprovalQueue" nillable="true" type="tns:DocumentApprovalQueue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentApprovalQueue" nillable="true" type="tns:ArrayOfDocumentApprovalQueue" />
+  <xs:complexType name="ArrayOfDocumentsNeedingApproval">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentsNeedingApproval" nillable="true" type="tns:DocumentsNeedingApproval" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentsNeedingApproval" nillable="true" type="tns:ArrayOfDocumentsNeedingApproval" />
+  <xs:complexType name="DocumentsNeedingApproval">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApprovalQueueID" type="xs:int" />
+      <xs:element minOccurs="0" name="DateSubmitted" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentID" type="xs:int" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentsNeedingApproval" nillable="true" type="tns:DocumentsNeedingApproval" />
+</xs:schema>

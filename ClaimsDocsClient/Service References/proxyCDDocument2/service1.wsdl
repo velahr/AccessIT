@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="CDDocument" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/ClaimsDocsBizLogic" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICDDocument_DocumentCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentRead" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentGroupSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGroupSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentGroupSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGroupSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentGroupClear_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGroupClear" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentGroupClear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentGroupClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentFieldSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentFieldSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentFieldSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentFieldSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentFieldClear_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentFieldClear" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentFieldClear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentFieldClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentFieldCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentFieldCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentFieldCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentFieldCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentAdjusterListSearch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentAdjusterListSearch" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentAdjusterListSearch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentAdjusterListSearchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentLogCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentLogCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentLogCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentLogCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentLogUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentLogUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentLogUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentLogUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentLogRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentLogRead" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentLogRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentLogReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueCreate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueCreate" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueCreate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueCreateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentDecline_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentDecline" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentDecline_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentDeclineResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprove" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueReadALL_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueReadALL" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueReadALL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueReadALLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueRead" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentApprovalQueueRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentApprovalQueueReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentsNeedingApprovalRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentsNeedingApprovalRead" />
+  </wsdl:message>
+  <wsdl:message name="ICDDocument_DocumentsNeedingApprovalRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DocumentsNeedingApprovalReadResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICDDocument">
+    <wsdl:operation name="DocumentCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentCreate" message="tns:ICDDocument_DocumentCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentCreateResponse" message="tns:ICDDocument_DocumentCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentRead" message="tns:ICDDocument_DocumentRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentReadResponse" message="tns:ICDDocument_DocumentRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentUpdate" message="tns:ICDDocument_DocumentUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentUpdateResponse" message="tns:ICDDocument_DocumentUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentSearch" message="tns:ICDDocument_DocumentSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentSearchResponse" message="tns:ICDDocument_DocumentSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGroupSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentGroupSearch" message="tns:ICDDocument_DocumentGroupSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentGroupSearchResponse" message="tns:ICDDocument_DocumentGroupSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGroupClear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentGroupClear" message="tns:ICDDocument_DocumentGroupClear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentGroupClearResponse" message="tns:ICDDocument_DocumentGroupClear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentFieldSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentFieldSearch" message="tns:ICDDocument_DocumentFieldSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentFieldSearchResponse" message="tns:ICDDocument_DocumentFieldSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentFieldClear">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentFieldClear" message="tns:ICDDocument_DocumentFieldClear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentFieldClearResponse" message="tns:ICDDocument_DocumentFieldClear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentFieldCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentFieldCreate" message="tns:ICDDocument_DocumentFieldCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentFieldCreateResponse" message="tns:ICDDocument_DocumentFieldCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentAdjusterListSearch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentAdjusterListSearch" message="tns:ICDDocument_DocumentAdjusterListSearch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentAdjusterListSearchResponse" message="tns:ICDDocument_DocumentAdjusterListSearch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentLogCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentLogCreate" message="tns:ICDDocument_DocumentLogCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentLogCreateResponse" message="tns:ICDDocument_DocumentLogCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentLogUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentLogUpdate" message="tns:ICDDocument_DocumentLogUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentLogUpdateResponse" message="tns:ICDDocument_DocumentLogUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentLogRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentLogRead" message="tns:ICDDocument_DocumentLogRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentLogReadResponse" message="tns:ICDDocument_DocumentLogRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueCreate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueCreate" message="tns:ICDDocument_DocumentApprovalQueueCreate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueCreateResponse" message="tns:ICDDocument_DocumentApprovalQueueCreate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueUpdate" message="tns:ICDDocument_DocumentApprovalQueueUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueUpdateResponse" message="tns:ICDDocument_DocumentApprovalQueueUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentDecline">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentDecline" message="tns:ICDDocument_DocumentDecline_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentDeclineResponse" message="tns:ICDDocument_DocumentDecline_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprove" message="tns:ICDDocument_DocumentApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentApproveResponse" message="tns:ICDDocument_DocumentApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueReadALL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueReadALL" message="tns:ICDDocument_DocumentApprovalQueueReadALL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueReadALLResponse" message="tns:ICDDocument_DocumentApprovalQueueReadALL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueRead" message="tns:ICDDocument_DocumentApprovalQueueRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentApprovalQueueReadResponse" message="tns:ICDDocument_DocumentApprovalQueueRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentsNeedingApprovalRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICDDocument/DocumentsNeedingApprovalRead" message="tns:ICDDocument_DocumentsNeedingApprovalRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICDDocument/DocumentsNeedingApprovalReadResponse" message="tns:ICDDocument_DocumentsNeedingApprovalRead_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICDDocument" type="tns:ICDDocument">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DocumentCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentRead">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentUpdate">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGroupSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentGroupSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentGroupClear">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentGroupClear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentFieldSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentFieldSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentFieldClear">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentFieldClear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentFieldCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentFieldCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentAdjusterListSearch">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentAdjusterListSearch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentLogCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentLogCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentLogUpdate">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentLogUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentLogRead">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentLogRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueCreate">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentApprovalQueueCreate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueUpdate">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentApprovalQueueUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentDecline">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentDecline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprove">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueReadALL">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentApprovalQueueReadALL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentApprovalQueueRead">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentApprovalQueueRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentsNeedingApprovalRead">
+      <soap:operation soapAction="http://tempuri.org/ICDDocument/DocumentsNeedingApprovalRead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CDDocument">
+    <wsdl:port name="BasicHttpBinding_ICDDocument" binding="tns:BasicHttpBinding_ICDDocument">
+      <soap:address location="http://prodwss06a.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e800ed41-1f42-4e47-a5fa-75cf2a329710" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDepartments.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="caba14cc-689c-4481-8f04-e126bb762eb7" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDepartments.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="ce7b11be-8284-46a0-aa74-bbcf68d994b8" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDepartments.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="9d4f3258-db91-47de-b1df-bf34924b9726" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDepartments.svc/mex" />
+    <MetadataFile FileName="ClaimsDocsBizLogic.xsd" MetadataType="Schema" ID="7c501309-e400-4df1-9c76-e6c4942b3f92" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDepartments.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

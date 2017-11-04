@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ce52ead7-aaf2-4f93-af53-e1f6ade292e2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="f9bae219-4050-42c1-8776-cdbdfad3fc20" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d98d3660-f55f-4bdc-9ffd-0af58a52bf0e" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="469e6bf2-9054-41d3-8445-ec429d64e6c4" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc/mex" />
+    <MetadataFile FileName="ClaimsDocsBizLogic.xsd" MetadataType="Schema" ID="145b6af3-7939-45f7-8219-a5570d6e8388" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc/mex" />
+    <MetadataFile FileName="ClaimsDocsBizLogic.SchemaClasses1.xsd" MetadataType="Schema" ID="1114fdb0-79e8-4283-9d21-fce9c86630fe" SourceId="1" SourceUrl="http://prodwss06a/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocumentField.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

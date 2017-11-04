@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2d480b29-1d67-42fa-80af-27d84c1a4b42" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="bdeade18-b5d8-4f1e-b105-dfef88f488bf" SourceId="1" SourceUrl="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="6faf19ba-5a20-47ff-87ed-d4c482cac9d1" SourceId="1" SourceUrl="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc/mex" />
+    <MetadataFile FileName="service21.xsd" MetadataType="Schema" ID="f651b23a-4f50-48bd-8a08-eedbb0cad984" SourceId="1" SourceUrl="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc/mex" />
+    <MetadataFile FileName="ClaimsDocsBizLogic1.xsd" MetadataType="Schema" ID="f9cb5a62-4ded-4453-88f3-1b5244f6c7bd" SourceId="1" SourceUrl="http://gavwssq01.alpha.accessgeneral.com/ClaimsDocsBizLogic/ClaimsDocsBizLogic.CDDocument.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

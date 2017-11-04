@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2cfc6b94-5be6-4b33-a360-7f82bf429bf7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="2813572e-6254-43ae-86da-175ed98bcb34" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5dc7e9b7-4511-4c00-8c51-fef85f9464d6" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="d0ce91b2-fcca-444c-9756-f9aa54c1f24b" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+    <MetadataFile FileName="ClaimsDocsBizLogic.xsd" MetadataType="Schema" ID="12d67b7d-6f6f-4a4d-b524-a8c37fbcc9ec" SourceId="1" SourceUrl="http://localhost:8731/Design_Time_Addresses/ClaimsDocsBizLogic/ClaimsDocsGenerator/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
